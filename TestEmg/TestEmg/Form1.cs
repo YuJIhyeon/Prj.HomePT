@@ -178,12 +178,10 @@ namespace TestEmg
                     )) ;
             }
 
-            Intrms += rms;
-
             // Display Emg Graphic Data (100 ms interval)
             if (m_CTId_Graph.Get() >= 100)
             {
-
+                Intrms += rms;
                 //int len = cplx.ToArray().Length;
                 //double HZ;
 
@@ -196,7 +194,7 @@ namespace TestEmg
                 //}
                 //Complex follow = tmp / 2;
                 //int follow_idx = 0;
-                
+
                 //for(int i = 0; i < temp.Length; i++)
                 //{
                 //    if ((Math.Truncate(temp[i].Real * 100) / 100) == (Math.Truncate(follow.Real * 100 / 100))){
@@ -209,12 +207,16 @@ namespace TestEmg
                 m_CTId_Graph.Set();
 
                 int data_rms = (int)(Math.Round(rms));
-                int data_int = (int)(Math.Round(Intrms) / 10000 * 5);
+                int data_int = (int)Math.Round(Intrms);
 
                 if (CollectionFlag)
                 {
                     dm.getRMS().AddRMS(data_rms);
                     dm.getINT().AddINT(data_int);
+                }
+                else
+                {
+                    Intrms = 0;
                 }
 
                 m_CGrap.Push(
@@ -234,7 +236,7 @@ namespace TestEmg
 
                 m_CGrap.OjwDraw();
 
-                m_CGrap3.Push(data_int);
+                m_CGrap3.Push(data_int/40);
                 m_CGrap3.OjwDraw();
             }
         }
@@ -449,7 +451,7 @@ namespace TestEmg
         private void Btn_Start_Click(object sender, EventArgs e)
         {
             string title = DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() +"_" + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString();
-            writer = new StreamWriter("../../Humble_" + title +".txt");
+            writer = new StreamWriter("../../Data/Humble_" + title +".txt");
             CollectionFlag = true;
         }
 

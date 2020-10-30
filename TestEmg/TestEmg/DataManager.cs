@@ -48,9 +48,9 @@ namespace TestEmg
                 result = angle_data.getAngleX()[i] + "\t" + angle_data.getAngleY()[i] + "\t" + angle_data.getAngleZ()[i] + "\t" +
                     gyro_data.getGyroX()[i] + "\t" + gyro_data.getGyroY()[i] + "\t" + gyro_data.getGyroZ()[i] + "\t" +
                     rms_data.getRMS()[i] + "\t" + int_data.getINT()[i];
-            }catch (IndexOutOfRangeException e)
+            }catch (ArgumentOutOfRangeException e)
             {
-                MessageBox.Show("Myo 연결이 잘못 되었습니다. 제대로 연결 후 프로그램을 껏다 켜주세요.");
+                ;
             }
             return result;
         }
