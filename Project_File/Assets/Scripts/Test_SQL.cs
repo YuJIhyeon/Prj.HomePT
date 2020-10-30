@@ -8,7 +8,7 @@ public class Test_SQL : MonoBehaviour
 {
     MySqlConnection sqlconn = null;
     private string sqlDBip = "127.0.0.1";
-    private string sqlDBname = "test";
+    private string sqlDBname = "humble";
     private string sqlDBid = "root";
     private string sqlDBpw = "autoset";
 

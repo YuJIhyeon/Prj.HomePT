@@ -19,6 +19,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 using System.Threading;
 using System.Diagnostics;
+using System.IO;
 
 namespace TestEmg
 {
@@ -27,6 +28,7 @@ namespace TestEmg
 
         private Thread cpuThread;
         private double[] cpuArray = new double[30];
+        bool CollectionFlag = false;
 
         public frmMain()
         {
@@ -205,6 +207,16 @@ namespace TestEmg
                 //HZ = follow_idx / 2;
 
                 m_CTId_Graph.Set();
+
+                int data_rms = (int)(Math.Round(rms));
+                int data_int = (int)(Math.Round(Intrms) / 10000 * 5);
+
+                if (CollectionFlag)
+                {
+                    dm.getRMS().AddRMS(data_rms);
+                    dm.getINT().AddINT(data_int);
+                }
+
                 m_CGrap.Push(
                         //e.EmgData.GetDataForSensor(0),
                         //e.EmgData.GetDataForSensor(1),
@@ -215,14 +227,14 @@ namespace TestEmg
                         //e.EmgData.GetDataForSensor(6),
                         //e.EmgData.GetDataForSensor(7),
 
-                        (int)(Math.Round(rms))
+                        data_rms
                         //(int)(Math.Round(HZ))
                         //(int)tmp.Real       //theta=0 , 어차피 허수부 존재 X
                         );
 
                 m_CGrap.OjwDraw();
 
-                m_CGrap3.Push((int)(Math.Round(Intrms)/10000*5));
+                m_CGrap3.Push(data_int);
                 m_CGrap3.OjwDraw();
             }
         }
@@ -268,6 +280,7 @@ namespace TestEmg
 
             float fMulti = 0.5f;
             float[] afAngle = new float[3];
+           
 
             #region Change ACC Value -> Angle
             float fTmp;
@@ -321,15 +334,32 @@ namespace TestEmg
 
             //    m_CTId.Set();
 
+            // Angle
+            int angle_x = (int)Math.Round(afAngle[0] * fMulti);
+            int angle_y = (int)Math.Round(afAngle[1] * fMulti);
+            int angle_z = (int)Math.Round(afAngle[2] * fMulti);
+
+            // Gyro
+            int gyro_x = (int)Math.Round(m_afGyro[0] * fMulti);
+            int gyro_y = (int)Math.Round(m_afGyro[1] * fMulti);
+            int gyro_z = (int)Math.Round(m_afGyro[2] * fMulti);
+
+            // Add angle, gyro data into each class
+            if (CollectionFlag)
+            {
+                dm.getAngle().AddAngle(angle_x, angle_y, angle_z);
+                dm.getGyro().AddGyro(gyro_x, gyro_y, gyro_z);
+            }
+            
 
             Ojw.CMessage.Write(txtSensor, String.Format("Angle X: {0}, Y: {1}, Z: {2}, \n Gyro X: {3}, Y: {4}, Z: {5} ",
 
-                (int)Math.Round(afAngle[0] * fMulti),
-                (int)Math.Round(afAngle[1] * fMulti),
-                (int)Math.Round(afAngle[2] * fMulti),
-                (int)Math.Round(m_afGyro[0] * fMulti),
-                (int)Math.Round(m_afGyro[1] * fMulti),
-                (int)Math.Round(m_afGyro[2] * fMulti)
+                angle_x,
+                angle_y,
+                angle_z,
+                gyro_x,
+                gyro_y,
+                gyro_z
                //(int)Math.Round(m_afAcc[0] * fMulti),
                //(int)Math.Round(m_afAcc[1] * fMulti),
                //(int)Math.Round(m_afAcc[2] * fMulti)
@@ -409,6 +439,34 @@ namespace TestEmg
             }
             return X;
         }
+
+
+
+        StreamWriter writer = null;
+
+        DataManager dm = new DataManager();
+
+        private void Btn_Start_Click(object sender, EventArgs e)
+        {
+            string title = DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() +"_" + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString();
+            writer = new StreamWriter("../../Humble_" + title +".txt");
+            CollectionFlag = true;
+        }
+
+        private void Save_button(object sender, EventArgs e)
+        {
+            CollectionFlag = false;
+
+            for (int i =0; i < dm.getSize(); i++)
+            {
+                writer.WriteLine(dm.ToString(i));
+            }
+            writer.Close();
+
+            MessageBox.Show("Save !");
+        }
+
+        
 
 
         //private void getPerformanceCounters()
