@@ -277,6 +277,8 @@ namespace TestEmg
         }
         #endregion Gyro
 
+        private double period = 0;
+        private double sec = 0;
         private void TmrDraw_Tick(object sender, EventArgs e)
         {
 
@@ -346,11 +348,22 @@ namespace TestEmg
             int gyro_y = (int)Math.Round(m_afGyro[1] * fMulti);
             int gyro_z = (int)Math.Round(m_afGyro[2] * fMulti);
 
-            // Add angle, gyro data into each class
+            // input timeStamp, Angle, Data.
             if (CollectionFlag)
             {
+                period += m_CTId.Get();
+                if(period >= 1000)
+                {
+                    sec += 1;
+                }
+                dm.getTimeStamp().Add(sec/10);
                 dm.getAngle().AddAngle(angle_x, angle_y, angle_z);
                 dm.getGyro().AddGyro(gyro_x, gyro_y, gyro_z);
+            }
+            else
+            {
+                period = 0;
+                sec = 0;
             }
             
 
@@ -450,7 +463,8 @@ namespace TestEmg
 
         private void Btn_Start_Click(object sender, EventArgs e)
         {
-            string title = DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() +"_" + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString();
+            string title = DateTime.Now.ToString("MMdd") + "_" + DateTime.Now.ToString("HHmm");
+            //string title = DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() +"_" + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString();
             writer = new StreamWriter("../../Data/Humble_" + title +".txt");
             CollectionFlag = true;
         }

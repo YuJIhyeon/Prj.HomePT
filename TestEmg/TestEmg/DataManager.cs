@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace TestEmg
         RMS rms_data = null;
         Gyro gyro_data = null;
         Angle angle_data = null;
+        ArrayList timeStamp = null;
 
         public DataManager()
         {
@@ -19,6 +21,7 @@ namespace TestEmg
             rms_data = new RMS();
             gyro_data = new Gyro();
             angle_data = new Angle();
+            timeStamp = new ArrayList();
         }
 
         public INT getINT()
@@ -39,13 +42,17 @@ namespace TestEmg
         {
             return angle_data;
         }
+        public ArrayList getTimeStamp()
+        {
+            return timeStamp;
+        }
 
         public string ToString(int i)
         {
             string result = "";
             try
             {
-                result = angle_data.getAngleX()[i] + "\t" + angle_data.getAngleY()[i] + "\t" + angle_data.getAngleZ()[i] + "\t" +
+                result = timeStamp[i]+ "\t" + angle_data.getAngleX()[i] + "\t" + angle_data.getAngleY()[i] + "\t" + angle_data.getAngleZ()[i] + "\t" +
                     gyro_data.getGyroX()[i] + "\t" + gyro_data.getGyroY()[i] + "\t" + gyro_data.getGyroZ()[i] + "\t" +
                     rms_data.getRMS()[i] + "\t" + int_data.getINT()[i];
             }catch (ArgumentOutOfRangeException e)
@@ -61,6 +68,7 @@ namespace TestEmg
             gyro_data.ResetGyro();
             rms_data.ResetRMS();
             int_data.ResetINT();
+            timeStamp.Clear();
         }
 
         public int getSize()

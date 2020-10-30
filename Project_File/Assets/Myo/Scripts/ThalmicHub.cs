@@ -61,7 +61,6 @@ public class ThalmicHub : MonoBehaviour
         return createHub();
 #endif
     }
-
     void Awake ()
     {
         // Ensure that there is only one ThalmicHub.
@@ -137,8 +136,10 @@ public class ThalmicHub : MonoBehaviour
         }
     }
 
+    // _myos[0].pose.ToString() => 손의 형태 출력. ex ) 주먹, 펼친 손 ...
     void Update ()
     {
+        
     }
 
     void hub_MyoPaired (object sender, Thalmic.Myo.MyoEventArgs e)

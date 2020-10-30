@@ -6,6 +6,7 @@ using XDirection = Thalmic.Myo.XDirection;
 using VibrationType = Thalmic.Myo.VibrationType;
 using Pose = Thalmic.Myo.Pose;
 using UnlockType = Thalmic.Myo.UnlockType;
+using System.Reflection;
 
 // Represents a Myo armband. Myo's orientation is made available through transform.localRotation, and other properties
 // like the current pose are provided explicitly below. All spatial data about Myo is provided following Unity

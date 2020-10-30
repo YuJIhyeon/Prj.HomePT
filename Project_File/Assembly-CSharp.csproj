@@ -125,12 +125,12 @@
     <Compile Include="Assets\NoitomNeuron\ResetPosition.cs" />
     <Compile Include="Assets\NoitomNeuron\TestCentroid.cs" />
     <Compile Include="Assets\NoitomNeuron\TestConfigJoint.cs" />
+    <Compile Include="Assets\Scripts\HPbar.cs" />
+    <Compile Include="Assets\Scripts\MyoControl.cs" />
     <Compile Include="Assets\Scripts\Test_SQL.cs" />
-    <Compile Include="Assets\myScripts\HPbar.cs" />
-    <Compile Include="Assets\myScripts\MyoControl.cs" />
-    <Compile Include="Assets\myScripts\TextManager.cs" />
-    <Compile Include="Assets\myScripts\durability.cs" />
-    <Compile Include="Assets\myScripts\gradient.cs" />
+    <Compile Include="Assets\Scripts\TextManager.cs" />
+    <Compile Include="Assets\Scripts\durability.cs" />
+    <Compile Include="Assets\Scripts\gradient.cs" />
     <None Include="Assets\NoitomNeuron\Neuron\Resources\Shaders\BoneLineShader.shader" />
     <None Include="Assets\NoitomNeuron\NeuronDebug\Fonts\LICENSE.txt" />
     <None Include="Assets\Myo\README-MyoUnity.txt" />
