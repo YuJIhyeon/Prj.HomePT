@@ -58,7 +58,7 @@ public class gradient : MonoBehaviour
                 G = 0;
                 B = 0;
             }
-            Debug.Log(R + " " + G + " " + B);
+            //Debug.Log(R + " " + G + " " + B);
             HP_FLAG = false;
         }
 

@@ -148,8 +148,15 @@ namespace TestEmg
         {
 
             //float amp = 0.7f; OJW 수정 불가 int only graph 
-            double rms = Math.Sqrt((Math.Pow(e.EmgData.GetDataForSensor(0), 2) + Math.Pow(e.EmgData.GetDataForSensor(1), 2) + Math.Pow(e.EmgData.GetDataForSensor(2), 2) + Math.Pow(e.EmgData.GetDataForSensor(3), 2) +
-                    Math.Pow(e.EmgData.GetDataForSensor(4), 2) + Math.Pow(e.EmgData.GetDataForSensor(5), 2) + Math.Pow(e.EmgData.GetDataForSensor(6), 2) + Math.Pow(e.EmgData.GetDataForSensor(7), 2)) / 8);
+            double rms = 
+                Math.Sqrt((Math.Pow(e.EmgData.GetDataForSensor(0), 2) + 
+                Math.Pow(e.EmgData.GetDataForSensor(1), 2) + 
+                Math.Pow(e.EmgData.GetDataForSensor(2), 2) + 
+                Math.Pow(e.EmgData.GetDataForSensor(3), 2) +
+                Math.Pow(e.EmgData.GetDataForSensor(4), 2) + 
+                Math.Pow(e.EmgData.GetDataForSensor(5), 2) + 
+                Math.Pow(e.EmgData.GetDataForSensor(6), 2) + 
+                Math.Pow(e.EmgData.GetDataForSensor(7), 2)) / 8);
 
             int mav = (Math.Abs(e.EmgData.GetDataForSensor(0)) + Math.Abs(e.EmgData.GetDataForSensor(1)) + Math.Abs(e.EmgData.GetDataForSensor(2)) + Math.Abs(e.EmgData.GetDataForSensor(3)) +
                       Math.Abs(e.EmgData.GetDataForSensor(4)) + Math.Abs(e.EmgData.GetDataForSensor(5)) + Math.Abs(e.EmgData.GetDataForSensor(6)) + Math.Abs(e.EmgData.GetDataForSensor(7))) / 8;

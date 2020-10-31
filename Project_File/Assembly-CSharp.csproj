@@ -66,16 +66,6 @@
     <Compile Include="Assets\Myo Samples\Scripts\ColorBoxByPose.cs" />
     <Compile Include="Assets\Myo Samples\Scripts\JointOrientation.cs" />
     <Compile Include="Assets\Myo Samples\Scripts\SampleSceneGUI.cs" />
-    <Compile Include="Assets\Myo\Scripts\Myo.NET\EventTypes.cs" />
-    <Compile Include="Assets\Myo\Scripts\Myo.NET\Hub.cs" />
-    <Compile Include="Assets\Myo\Scripts\Myo.NET\Myo.cs" />
-    <Compile Include="Assets\Myo\Scripts\Myo.NET\Pose.cs" />
-    <Compile Include="Assets\Myo\Scripts\Myo.NET\Properties\AssemblyInfo.cs" />
-    <Compile Include="Assets\Myo\Scripts\Myo.NET\Quaternion.cs" />
-    <Compile Include="Assets\Myo\Scripts\Myo.NET\Vector3.cs" />
-    <Compile Include="Assets\Myo\Scripts\Myo.NET\libmyo.cs" />
-    <Compile Include="Assets\Myo\Scripts\ThalmicHub.cs" />
-    <Compile Include="Assets\Myo\Scripts\ThalmicMyo.cs" />
     <Compile Include="Assets\NoitomNeuron\Lamp.cs" />
     <Compile Include="Assets\NoitomNeuron\Neuron\Scripts\Mocap\NeuronActor.cs" />
     <Compile Include="Assets\NoitomNeuron\Neuron\Scripts\Mocap\NeuronAnimatorInstance.cs" />
@@ -126,11 +116,22 @@
     <Compile Include="Assets\NoitomNeuron\TestCentroid.cs" />
     <Compile Include="Assets\NoitomNeuron\TestConfigJoint.cs" />
     <Compile Include="Assets\Scripts\HPbar.cs" />
+    <Compile Include="Assets\Scripts\Myo.NET\EventTypes.cs" />
+    <Compile Include="Assets\Scripts\Myo.NET\Hub.cs" />
+    <Compile Include="Assets\Scripts\Myo.NET\Myo.cs" />
+    <Compile Include="Assets\Scripts\Myo.NET\Pose.cs" />
+    <Compile Include="Assets\Scripts\Myo.NET\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Scripts\Myo.NET\Quaternion.cs" />
+    <Compile Include="Assets\Scripts\Myo.NET\Vector3.cs" />
+    <Compile Include="Assets\Scripts\Myo.NET\libmyo.cs" />
     <Compile Include="Assets\Scripts\MyoControl.cs" />
     <Compile Include="Assets\Scripts\Test_SQL.cs" />
     <Compile Include="Assets\Scripts\TextManager.cs" />
+    <Compile Include="Assets\Scripts\ThalmicHub.cs" />
+    <Compile Include="Assets\Scripts\ThalmicMyo.cs" />
     <Compile Include="Assets\Scripts\durability.cs" />
     <Compile Include="Assets\Scripts\gradient.cs" />
+    <None Include="Assets\lib\MyoJesture.txt" />
     <None Include="Assets\NoitomNeuron\Neuron\Resources\Shaders\BoneLineShader.shader" />
     <None Include="Assets\NoitomNeuron\NeuronDebug\Fonts\LICENSE.txt" />
     <None Include="Assets\Myo\README-MyoUnity.txt" />
@@ -317,6 +318,33 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>D:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.WMPLib">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/lib/AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WMPLib">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/lib/Interop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Contracts">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/lib/Microsoft.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="MyoSharp">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/lib/MyoSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenJigWare">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/lib/OpenJigWare.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.FreeGlut">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/lib/Tao.FreeGlut.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.Ode">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/lib/Tao.Ode.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.OpenGl">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/lib/Tao.OpenGl.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.Platform.Windows">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/lib/Tao.Platform.Windows.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
       <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/Plugins/MySql.Data.dll</HintPath>
