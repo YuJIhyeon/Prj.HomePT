@@ -474,6 +474,8 @@ namespace TestEmg
             //string title = DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() +"_" + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString();
             writer = new StreamWriter("../../Data/Humble_" + title +".txt");
             CollectionFlag = true;
+            Btn_Stop.Enabled = true;
+            Btn_Start.Enabled = false;
         }
 
         private void Save_button(object sender, EventArgs e)
@@ -487,6 +489,8 @@ namespace TestEmg
             writer.Close();
 
             MessageBox.Show("Save !");
+            Btn_Start.Enabled = true;
+            Btn_Stop.Enabled = false;
         }
 
         
