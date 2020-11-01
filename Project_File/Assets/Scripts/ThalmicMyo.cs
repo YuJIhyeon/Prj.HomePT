@@ -10,6 +10,8 @@ using StreamEmg = Thalmic.Myo.StreamEmg;
 using WMPLib;
 using System.Data.SqlTypes;
 using System.Configuration;
+using Windows.Kinect;
+using LightBuzz.Vitruvius;
 
 // Represents a Myo armband. Myo's orientation is made available through transform.localRotation, and other properties
 // like the current pose are provided explicitly below. All spatial data about Myo is provided following Unity
@@ -109,7 +111,6 @@ public class ThalmicMyo : MonoBehaviour {
 
         double rms = calRMS();
         calINT(rms, collection_flag);
-
         //Debug.Log(getRMS());
     }
 

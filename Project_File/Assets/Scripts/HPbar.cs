@@ -38,7 +38,7 @@ public class HPbar : MonoBehaviour
             if (curHp > 0)
             {
                 curHp -= ThalmicMyo.getRMS();
-                Debug.Log("HP : " + HPbar.curHp);
+                //Debug.Log("HP : " + HPbar.curHp);
             }
             else
             {

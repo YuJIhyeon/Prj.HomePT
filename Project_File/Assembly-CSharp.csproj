@@ -116,6 +116,25 @@
     <Compile Include="Assets\NoitomNeuron\TestCentroid.cs" />
     <Compile Include="Assets\NoitomNeuron\TestConfigJoint.cs" />
     <Compile Include="Assets\Scripts\HPbar.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Angle\AngleArc.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Angle\AngleSample.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Angle\JointPeak.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Angle\SelectiveAngleHuman.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\Anchoring.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\ButtonGauge.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\CameraExtensions.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\CursorInfo.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\FrameView.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\KinectButton.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\KinectUI.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\MeasurementSystem.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\Stickman.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\StickmanController.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\VitruviusSample.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\VitruviusSensorInfo.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\VitruviusVideo.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\VitruviusVideoSlider.cs" />
+    <Compile Include="Assets\Scripts\Kinect_Connect\VitruviusVideoState.cs" />
     <Compile Include="Assets\Scripts\Myo.NET\EventTypes.cs" />
     <Compile Include="Assets\Scripts\Myo.NET\Hub.cs" />
     <Compile Include="Assets\Scripts\Myo.NET\Myo.cs" />
@@ -125,6 +144,7 @@
     <Compile Include="Assets\Scripts\Myo.NET\Vector3.cs" />
     <Compile Include="Assets\Scripts\Myo.NET\libmyo.cs" />
     <Compile Include="Assets\Scripts\MyoControl.cs" />
+    <Compile Include="Assets\Scripts\SaveFile.cs" />
     <Compile Include="Assets\Scripts\Test_SQL.cs" />
     <Compile Include="Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Scripts\ThalmicHub.cs" />
@@ -136,6 +156,7 @@
     <None Include="Assets\NoitomNeuron\NeuronDebug\Fonts\LICENSE.txt" />
     <None Include="Assets\Myo\README-MyoUnity.txt" />
     <None Include="Assets\NoitomNeuron\Neuron\PN_UnityIntegration_ChangLog.txt" />
+    <None Include="Assets\LightBuzz.Vitruvius\Models\Shaders\Mobile-XRay Effect.shader" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -346,8 +367,17 @@
     <Reference Include="Tao.Platform.Windows">
       <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/lib/Tao.Platform.Windows.dll</HintPath>
     </Reference>
+    <Reference Include="LightBuzz.Vitruvius">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/LightBuzz.Vitruvius/LightBuzz.Vitruvius.dll</HintPath>
+    </Reference>
+    <Reference Include="Windows.Kinect">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/LightBuzz.Vitruvius/Windows.Kinect.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/Plugins/MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="LightBuzz.Vitruvius.Unity">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/Plugins/x86_64/LightBuzz.Vitruvius.Unity.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

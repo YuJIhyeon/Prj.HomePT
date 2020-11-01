@@ -63,6 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LightBuzz.Vitruvius\Editor\AnchoringEditor.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Editor\UILineRendererEditor.cs" />
+    <Compile Include="Assets\LightBuzz.Vitruvius\Editor\UIMeshRendererEditor.cs" />
     <Compile Include="Assets\NoitomNeuron\Neuron\Scripts\Editor\NeuronTransformsInstanceEditor.cs" />
     <Compile Include="Assets\NoitomNeuron\Neuron\Scripts\Editor\NeuronTransformsInstanceVREditor.cs" />
     <Compile Include="Assets\NoitomNeuron\Neuron\Scripts\Editor\SkeletonTools.cs" />
@@ -292,8 +295,17 @@
     <Reference Include="Tao.Platform.Windows">
       <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/lib/Tao.Platform.Windows.dll</HintPath>
     </Reference>
+    <Reference Include="LightBuzz.Vitruvius">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/LightBuzz.Vitruvius/LightBuzz.Vitruvius.dll</HintPath>
+    </Reference>
+    <Reference Include="Windows.Kinect">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/LightBuzz.Vitruvius/Windows.Kinect.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/Plugins/MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="LightBuzz.Vitruvius.Unity">
+      <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Assets/Plugins/x86_64/LightBuzz.Vitruvius.Unity.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/Hojin/Desktop/Prj.HomePT/Project_File/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -690,6 +702,10 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{3C3D10DE-8999-431E-42E1-89FAEBCC3139}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{E1847DA1-1514-C745-26DB-921B99655D6F}</Project>
+      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
