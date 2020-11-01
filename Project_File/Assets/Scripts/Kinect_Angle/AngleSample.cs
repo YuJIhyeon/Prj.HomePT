@@ -19,8 +19,6 @@ public class AngleSample : VitruviusSample
     public AngleArc frameViewArc;
     public AngleArc modelArc;
 
-    GUIStyle guiStyle;
-
     #endregion
 
     #region Reserved methods // Awake - OnApplicationQuit - Update - OnGUI
@@ -135,24 +133,6 @@ public class AngleSample : VitruviusSample
                 (Vector2.Dot(Quaternion.Euler(0, 0, 90) * startJointDir, endJointDir) > 0 ? startJointDir : endJointDir);
 
             #endregion
-        }
-    }
-
-    void OnGUI()
-    {
-        if (!stickman.isActiveAndEnabled) return;
-
-        if (guiStyle == null)
-        {
-            guiStyle = new GUIStyle(GUI.skin.textArea);
-            guiStyle.alignment = TextAnchor.MiddleCenter;
-        }
-
-        for (int i = 0; i < jointPeaks.Length; i++)
-        {
-            Vector2 jointPosition = Camera.main.WorldToScreenPoint(jointPeaks[i].arc.transform.position);
-
-            GUI.Label(new Rect(jointPosition.x, Screen.height - jointPosition.y, 50, 25), jointPeaks[i].jointAngle.ToString("N0") + "°", guiStyle);
         }
     }
 

@@ -115,6 +115,7 @@
     <Compile Include="Assets\NoitomNeuron\ResetPosition.cs" />
     <Compile Include="Assets\NoitomNeuron\TestCentroid.cs" />
     <Compile Include="Assets\NoitomNeuron\TestConfigJoint.cs" />
+    <Compile Include="Assets\Scripts\BtnEvent.cs" />
     <Compile Include="Assets\Scripts\HPbar.cs" />
     <Compile Include="Assets\Scripts\Kinect_Angle\AngleArc.cs" />
     <Compile Include="Assets\Scripts\Kinect_Angle\AngleSample.cs" />
@@ -143,12 +144,12 @@
     <Compile Include="Assets\Scripts\Myo.NET\Quaternion.cs" />
     <Compile Include="Assets\Scripts\Myo.NET\Vector3.cs" />
     <Compile Include="Assets\Scripts\Myo.NET\libmyo.cs" />
-    <Compile Include="Assets\Scripts\MyoControl.cs" />
     <Compile Include="Assets\Scripts\SaveFile.cs" />
     <Compile Include="Assets\Scripts\Test_SQL.cs" />
-    <Compile Include="Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Scripts\ThalmicHub.cs" />
     <Compile Include="Assets\Scripts\ThalmicMyo.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\UI_Panel_Manager.cs" />
     <Compile Include="Assets\Scripts\durability.cs" />
     <Compile Include="Assets\Scripts\gradient.cs" />
     <None Include="Assets\lib\MyoJesture.txt" />
