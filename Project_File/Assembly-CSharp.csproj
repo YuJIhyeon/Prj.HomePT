@@ -144,20 +144,23 @@
     <Compile Include="Assets\Scripts\Myo.NET\Quaternion.cs" />
     <Compile Include="Assets\Scripts\Myo.NET\Vector3.cs" />
     <Compile Include="Assets\Scripts\Myo.NET\libmyo.cs" />
+    <Compile Include="Assets\Scripts\Recommend.cs" />
     <Compile Include="Assets\Scripts\SaveFile.cs" />
     <Compile Include="Assets\Scripts\Test_SQL.cs" />
     <Compile Include="Assets\Scripts\ThalmicHub.cs" />
     <Compile Include="Assets\Scripts\ThalmicMyo.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI_Panel_Manager.cs" />
+    <Compile Include="Assets\Scripts\UserPanel.cs" />
     <Compile Include="Assets\Scripts\durability.cs" />
     <Compile Include="Assets\Scripts\gradient.cs" />
     <None Include="Assets\lib\MyoJesture.txt" />
     <None Include="Assets\NoitomNeuron\Neuron\Resources\Shaders\BoneLineShader.shader" />
     <None Include="Assets\NoitomNeuron\NeuronDebug\Fonts\LICENSE.txt" />
     <None Include="Assets\Myo\README-MyoUnity.txt" />
+    <None Include="Assets\Data\H_data_2.txt" />
     <None Include="Assets\NoitomNeuron\Neuron\PN_UnityIntegration_ChangLog.txt" />
     <None Include="Assets\LightBuzz.Vitruvius\Models\Shaders\Mobile-XRay Effect.shader" />
+    <None Include="Assets\Data\H_data_1.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

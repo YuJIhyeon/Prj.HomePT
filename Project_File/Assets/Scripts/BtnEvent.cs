@@ -7,7 +7,18 @@ public class BtnEvent : MonoBehaviour
 {
     public void Restart()
     {
-        UI_Panel_Manager.srGroup(UI_Panel_Manager.User_Panel, UI_Panel_Manager.End_Panel);
+        if (UI_Panel_Manager.endState == EndState.End_main)
+            UI_Panel_Manager.srGroup(UI_Panel_Manager.User_Panel, UI_Panel_Manager.End_Panel);
+        
+        else if (UI_Panel_Manager.endState == EndState.After_Recommend)
+            UI_Panel_Manager.srGroup(UI_Panel_Manager.User_Panel, UI_Panel_Manager.Recommend_Panel);
+        UI_Panel_Manager.endState = EndState.None;
+    }
+
+    public void Go_Recommend()
+    {
+        UI_Panel_Manager.srGroup(UI_Panel_Manager.Recommend_Panel, UI_Panel_Manager.End_Panel);
+        UI_Panel_Manager.endState = EndState.Before_Recommend;
     }
 
 }
