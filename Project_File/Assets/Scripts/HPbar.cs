@@ -8,8 +8,8 @@ public class HPbar : MonoBehaviour
     [SerializeField]
     private Slider hpBar;
 
-    private float maxHp = 3000;  // 최대 hp 상태
-    public static float curHp = 3000; //현재 hp 상태
+    private float maxHp = 4500;  // 최대 hp 상태
+    public static float curHp = 4500; //현재 hp 상태
     public static int MinusHP = 5;
 
     float hpRatio = curHp;
