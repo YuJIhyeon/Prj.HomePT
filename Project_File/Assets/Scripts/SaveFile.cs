@@ -30,7 +30,7 @@ public class SaveFile : MonoBehaviour
             //Debug.Log("Angle : " + AngleArc.angle);
             if (!writeFlag)
             {
-                filePath = "./HumbleData/Humble" + DateTime.Now.ToString("MMdd_HHmm") + ".txt";
+                filePath = "./HumbleData/Humble" + DateTime.Now.ToString("MMdd_hhmm") + ".txt";
                 fs = new FileStream(filePath, FileMode.Create);
                 sw = new StreamWriter(fs);
                 writeFlag = true;

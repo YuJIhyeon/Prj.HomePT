@@ -21,4 +21,10 @@ public class BtnEvent : MonoBehaviour
         UI_Panel_Manager.endState = EndState.Before_Recommend;
     }
 
+    public void Back()
+    {
+        UI_Panel_Manager.srGroup(UI_Panel_Manager.End_Panel, UI_Panel_Manager.Recommend_Panel);
+        UI_Panel_Manager.endState = EndState.End_main;
+    }
+
 }

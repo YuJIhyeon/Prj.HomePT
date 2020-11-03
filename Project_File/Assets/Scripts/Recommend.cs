@@ -59,14 +59,35 @@ public class Recommend : MonoBehaviour
         if (inRecommend)
         {
             inRecommend = false;
+            string [] tmpSplit;
+            string[] tmpData = {"-", "-", "-"};
 
             if (UI_Panel_Manager.exercise == ExerciseType.Dumbbell_curl)
                 readData = File.ReadAllLines(@"./Assets/Data/H_data_1.txt");
             else if (UI_Panel_Manager.exercise == ExerciseType.Dumbbell_kick_back)
                 readData = File.ReadAllLines(@"./Assets/Data/H_data_2.txt");
-
-            string[] tmpData = pickRandom();
-
+            
+            if (readData.Length < 6)                // 1개의 결과가 2줄씩 존재. 따라서 3개의 결과 이하를 뜻함.
+            {
+                for (int i=0; i < readData.Length/2; i++)
+                {
+                    tmpData[i] = readData[i*2];
+                }
+            }
+            else
+            {
+                tmpData = pickRandom();
+            }
+            
+            for (int i=0; i<3; i++)
+            {
+                tmpSplit = tmpData[i].Split(',');
+                tmpData[i] = "";
+                for (int j=0; j < tmpSplit.Length-1; j++)                       // -1을 한 이유는 맨 마지막은 split결과가 마지막은 항상 ""로 존재. (계산이유 없음)
+                {
+                    tmpData[i] = tmpData[i] + tmpSplit[j] + "\n";
+                }
+            }
             text0.text = tmpData[0];
             text1.text = tmpData[1];
             text2.text = tmpData[2];
