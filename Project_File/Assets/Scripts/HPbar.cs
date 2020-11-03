@@ -20,10 +20,10 @@ public class HPbar : MonoBehaviour
         hpBar.value = (float)curHp / (float)maxHp;
     }
 
-    private int period = 0;
+    private float period = 0;
     void Update()
     {
-        period += 1;
+        period += Time.deltaTime;
         //Debug.Log(period);
         if (Input.GetKeyDown(KeyCode.Space))     // 스페이스바 누르면 INT 측정 시작
         {
@@ -31,7 +31,7 @@ public class HPbar : MonoBehaviour
             curHp = maxHp;
         }
 
-        if (period > 100 && ThalmicMyo.collection_flag)    //1차: spacebar keydown이 있을경우 hpBar가 10씩 떨어짐 >> 팔의 움직임을 조건으로 걸어 떨어지는 수치 변경
+        if (period > 0.1f && ThalmicMyo.collection_flag)    //1차: spacebar keydown이 있을경우 hpBar가 10씩 떨어짐 >> 팔의 움직임을 조건으로 걸어 떨어지는 수치 변경
         {
             period = 0;
             gradient.HP_FLAG = true;

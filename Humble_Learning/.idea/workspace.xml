@@ -19,7 +19,29 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1863b97-7454-4b1e-a1f1-63aaa15fae85" name="Default Changelist" comment="" />
+    <list default="true" id="a1863b97-7454-4b1e-a1f1-63aaa15fae85" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H_recommend.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/.vs/Project_File/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/.vs/Project_File/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Assets/Scripts/BtnEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/Assets/Scripts/BtnEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Assets/Scripts/HPbar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/Assets/Scripts/HPbar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Assets/Scripts/UIManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Assets/Scripts/UIManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Assets/Scripts/UI_Panel_Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/Assets/Scripts/UI_Panel_Manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Library/StateCache/Hierarchy/c5df01-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/Library/StateCache/Hierarchy/c5df01-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/Library/StateCache/SceneView/2b4d28-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/Library/StateCache/SceneView/2b4d28-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_File/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_File/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,21 +57,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="JupyterTrust" id="16dce949-f35d-492b-88a2-4621a39bdc33" />
-  <component name="ProjectId" id="1jjg3xxhWNE80VjB6Z8HGTuvwtP" />
+  <component name="ProjectId" id="1jjWUZpjBYyiN5s5UB3FZuvhG0e" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/GoogleDrive/2020-1/DataMining_HW" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Python.H_mining">
+  <component name="RunManager" selected="Python.H_recommend">
     <configuration name="H_LSTM" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Humble_Learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -57,9 +78,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\HANLAB\AppData\Local\Microsoft\WindowsApps\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -79,13 +100,34 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\HANLAB\AppData\Local\Microsoft\WindowsApps\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/H_mining.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="H_recommend" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Humble_Learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/H_recommend.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,9 +204,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.H_LSTM" />
+        <item itemvalue="Python.H_recommend" />
         <item itemvalue="Python.test (1)" />
         <item itemvalue="Python.Humble_Mining" />
+        <item itemvalue="Python.H_LSTM" />
         <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
@@ -190,13 +233,14 @@
       <workItem from="1604302685917" duration="2975000" />
       <workItem from="1604305688217" duration="1253000" />
       <workItem from="1604306971701" duration="3633000" />
-      <workItem from="1604322721347" duration="195000" />
-      <workItem from="1604322926904" duration="1241000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="24097000" />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -211,40 +255,49 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="826" y="279" key="EnvironmentVariablesDialog" timestamp="1604323275011">
+    <state width="1559" height="466" key="DebuggerActiveHint" timestamp="1604320700579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="826" y="279" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604323275011" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1604323470047">
+    <state width="1559" height="466" key="DebuggerActiveHint/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604320700579" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604318614011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604323470047" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1604323470047">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604318614011" />
+    <state width="1568" height="234" key="GridCell.Tab.0.bottom" timestamp="1604328183052">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604323470047" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1604323470047">
+    <state width="1568" height="234" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604326314544" />
+    <state width="1568" height="234" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604328183052" />
+    <state width="1568" height="234" key="GridCell.Tab.0.center" timestamp="1604328183052">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604323470047" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1604323470047">
+    <state width="1568" height="234" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604326314543" />
+    <state width="1568" height="234" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604328183052" />
+    <state width="1568" height="234" key="GridCell.Tab.0.left" timestamp="1604328183052">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604323470047" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1604323567293">
+    <state width="1568" height="234" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604326314543" />
+    <state width="1568" height="234" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604328183052" />
+    <state width="1568" height="234" key="GridCell.Tab.0.right" timestamp="1604328183052">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604323567293" />
-    <state x="540" y="175" key="editAsTableFormatDialogDimension" timestamp="1604322904493">
+    <state width="1568" height="234" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604326314543" />
+    <state width="1568" height="234" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604328183052" />
+    <state width="1899" height="347" key="GridCell.Tab.1.bottom" timestamp="1604321173891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="540" y="175" key="editAsTableFormatDialogDimension/0.0.1920.1040@0.0.1920.1040" timestamp="1604322904493" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Humble_Learning$H_LSTM.coverage" NAME="H_LSTM Coverage Results" MODIFIED="1604323372345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Humble_Learning$test.coverage" NAME="test Coverage Results" MODIFIED="1604244074768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Humble_Learning$Humble_Mining.coverage" NAME="Humble_Mining Coverage Results" MODIFIED="1604295446999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Humble_Learning$H_mining.coverage" NAME="H_mining Coverage Results" MODIFIED="1604323470042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Humble_Learning$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1604314126742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <state width="1899" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604321173891" />
+    <state width="1899" height="347" key="GridCell.Tab.1.center" timestamp="1604321173891">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="347" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604321173891" />
+    <state width="1899" height="347" key="GridCell.Tab.1.left" timestamp="1604321173891">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="347" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604321173891" />
+    <state width="1899" height="347" key="GridCell.Tab.1.right" timestamp="1604321173891">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="347" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1604321173891" />
   </component>
 </project>

@@ -12,7 +12,7 @@ enum User_state
     exercising
 }
 
-public class UIManager : MonoBehaviour
+public class UserPanel : MonoBehaviour
 {
     private User_state user_state;
 
@@ -51,6 +51,7 @@ public class UIManager : MonoBehaviour
             if (sets >= 5)
             {
                 UI_Panel_Manager.srGroup(UI_Panel_Manager.End_Panel, UI_Panel_Manager.User_Panel);
+                UI_Panel_Manager.endState = EndState.End_main;
                 initialUI();
             }
 
