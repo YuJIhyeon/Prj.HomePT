@@ -66,6 +66,10 @@
     <Compile Include="Assets\LightBuzz.Vitruvius\Editor\AnchoringEditor.cs" />
     <Compile Include="Assets\LightBuzz.Vitruvius\Editor\UILineRendererEditor.cs" />
     <Compile Include="Assets\LightBuzz.Vitruvius\Editor\UIMeshRendererEditor.cs" />
+    <Compile Include="Assets\NoitomNeuron\Neuron\Scripts\Editor\NeuronTransformsInstanceEditor.cs" />
+    <Compile Include="Assets\NoitomNeuron\Neuron\Scripts\Editor\NeuronTransformsInstanceVREditor.cs" />
+    <Compile Include="Assets\NoitomNeuron\Neuron\Scripts\Editor\SkeletonTools.cs" />
+    <Compile Include="Assets\NoitomNeuron\NeuronInteraction\Scripts\Editor\FingerInspector.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

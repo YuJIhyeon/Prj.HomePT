@@ -50,10 +50,10 @@ public class Recommend : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (UI_Panel_Manager.endState == EndState.Before_Recommend)
+        if (UI_Panel_Manager.curState == DisplayState.Before_Recommend)
         {
             inRecommend = true;
-            UI_Panel_Manager.endState = EndState.After_Recommend;
+            UI_Panel_Manager.curState = DisplayState.After_Recommend;
         }
 
         if (inRecommend)

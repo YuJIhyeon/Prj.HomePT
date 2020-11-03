@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEditorInternal;
 using UnityEngine;
 
-public enum EndState
+public enum DisplayState
 {
-    None,           // 안 끝난 상태
+    Start,
+    Before_Measure,
+    After_Measure,
     End_main,
+    Exercise,
     Before_Recommend,     // 추천 전
     After_Recommend      // 추천 후
 }
@@ -19,24 +22,35 @@ public enum ExerciseType
 
 public class UI_Panel_Manager : MonoBehaviour
 {
+    public CanvasGroup s_p;
+    public CanvasGroup m_p;
     public CanvasGroup u_p;
     public CanvasGroup e_p;
     public CanvasGroup r_p;
+    public static CanvasGroup Start_Panel;
+    public static CanvasGroup Measure_Panel;
     public static CanvasGroup User_Panel;
     public static CanvasGroup End_Panel;
     public static CanvasGroup Recommend_Panel;
-    public static EndState endState;
 
+    public static DisplayState curState;
     public static ExerciseType exercise;
     
 
     public void Start()
     {
+        // 패널 초기화
+        Start_Panel = s_p;
+        Measure_Panel = m_p;
         User_Panel = u_p;
         End_Panel = e_p;
         Recommend_Panel = r_p;
-        endState = EndState.None;
-        srGroup(User_Panel, End_Panel);
+
+        srGroup(Start_Panel, End_Panel);
+
+        // 상태 초기화
+        curState = DisplayState.Start;
+
 
         // 일단은 덤벨컬만 한다는 가정 하에 진행.
         exercise = ExerciseType.Dumbbell_curl;

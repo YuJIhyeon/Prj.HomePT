@@ -51,7 +51,7 @@ public class UserPanel : MonoBehaviour
             if (sets >= 5)
             {
                 UI_Panel_Manager.srGroup(UI_Panel_Manager.End_Panel, UI_Panel_Manager.User_Panel);
-                UI_Panel_Manager.endState = EndState.End_main;
+                UI_Panel_Manager.curState = DisplayState.End_main;
                 initialUI();
             }
 
