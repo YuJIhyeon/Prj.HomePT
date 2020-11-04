@@ -1,17 +1,6 @@
 import numpy as np
 
-test=['a','b','c','d','e','f']
+x=np.array([10,3,41,12,9,1,3,34])
+y=(x-np.mean(x))/np.std(x)
 
-#print(test)
-A = np.random.shuffle(test)
-print(type(A))
-
-print(A)
-if A=='a':
-    print(A)
-    print("a")
-
-
-if A=='b':
-    print(A)
-    print("b")
+print(np.mean(y))

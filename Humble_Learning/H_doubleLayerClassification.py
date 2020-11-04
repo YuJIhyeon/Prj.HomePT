@@ -62,8 +62,6 @@ def GenerateTrDataForm(data):
 
     #random.shuffle(inData)
 
-    #print(inData.shape)
-    #print(len(inData))
     RMS=[]
     for i in inData:
         tmp=i[0]
@@ -86,9 +84,6 @@ def GenerateTrDataForm(data):
 
     inData=np.hstack((normalRMS, normalANG))
 
-    #print("test data")
-    #print(inData)
-
     y_label=[]
     for i in range(0, len(data[c])):
         x=0       # biceps: 0, tri : 1
@@ -99,10 +94,7 @@ def GenerateTrDataForm(data):
         x=1
         y_label.append(x)
 
-    #random.shuffle(y_label)
 
-
-    #print(np.unique(y_label, return_counts=True))
     y_label=np.array(y_label)
     return inData, y_label
 
@@ -118,12 +110,12 @@ def GenerateVDataForm(data):
 
     y_label=[]
     for i in range(0,len(data[c])):
-        x='Dumbbell curl'
+        x=0
         y_label.append(x)
 
 
     for i in range(0,len(data[k])):
-        x='Dumbbell kickBack'
+        x=1
         y_label.append(x)
 
     #random.shuffle(y_label)
@@ -175,10 +167,6 @@ def GenerateTDataForm(data):
         x=1
         y_label.append(x)
 
-
-
-    #random.shuffle(y_label)
-
     RMS = []
     for i in inData:
         tmp = i[0]
@@ -208,120 +196,128 @@ x_train, y_train=GenerateTrDataForm(trainingD)
 x_train=x_train.transpose()
 y_train=np.array(y_train).reshape(1, len(y_train))
 
-#print("x_train=",x_train)
-#print("y_train=",y_train)
-
 ValidateD=ValidateData()
 x_val,y_val=GenerateVDataForm(ValidateD)
 
 x_val=x_val.transpose()
 y_val=np.array(y_val).reshape(1, len(y_val))
 
-#print("x_val=",x_val)
-#print("y_val=",y_val)
 
 TestD=TestData()
 x_test, y_test=GenerateTDataForm(TestD)
 
 x_test = x_test.transpose()
 y_test = np.array(y_test).reshape(1, len(y_test))
-
-#print("x_test=",x_test)
-#print("y_test=",y_test)
-
-#print(Data)
-
-# ---------------------------------------------------------------------------
-# ---------------------------------------------------------------------------
-
-def sigmoid(z):
-    return 1. /(1 + np.exp(-z))
-
-def tanh(x):
-    ex = np.round(np.exp(x),4)
-    enx = np.round(np.exp(-x),4)
-    return (ex-enx)/(ex+enx)
-
+# ===================================================================================
 def affine (W, X, B):
     return np.dot(W.T, X) + B
 
-def init_random_parameters (num_layer = 1):
+def sigmoid (o):
+    return 1./(1+np.exp(-1*o))
 
-    W1 = np.round(np.random.rand(2,num_layer),4)
-    B1 = np.round(np.random.random((1,1)),4)
-    #B1 = np.round(np.zeros((1, 1)), 4)
+def init_random_parameters (num_hidden = 2):
 
-    return W1, B1
+    W1 = np.random.rand(2,num_hidden)
+    B1 = np.random.random((num_hidden,1))
+    W2 = np.random.rand(num_hidden,1)
+    B2 = np.random.random((1,1))
+    return W1, B1, W2, B2
 
-# W1, B1 =init_random_parameters ()
-# Z1 = affine(W1, x_train,B1)
-# y_hat=tanh(Z1)
+W1,B1,W2,B2=init_random_parameters ()
 
-#print(f"X_train.shape: {x_train}")
-#plt.plot(x_train.transpose())
-#plt.show()
-#print(Z1)
+Z1=affine(W1,x_test,B1)
+H=sigmoid(Z1)
 
-#print("After Activation function")
-#print(y_hat)
-#print()
-#print("length of After Activation function")
-#for i in y_hat:
-#    print(len(i))
+Z2 = affine(W2,H, B2)
+Y_hat = sigmoid(Z2)
 
-def loss_eval_Activation(_params):  # sigmoid
-    W1, B1 = _params
+
+def loss_eval(_params):
+    W1, B1, W2, B2 = _params
+
     # Forward: input Layer
-    Z1 = np.round(affine(W1, x_train, B1), 4)
+    Z1 = affine(W1, x_test, B1)
+    H = sigmoid(Z1)
 
-    y_hat = np.round(sigmoid(Z1), 4)
+    # Forward: Hidden Layer
+    Z2 = affine(W2, H, B2)
+    Y_hat = sigmoid(Z2)
 
-    # cross entropy
-    loss = np.round((1. / x_train.shape[1]) * np.round(np.sum(-1 * (y_train * np.round(np.log(y_hat),4) + (1 - y_train) * np.round(np.log(1 - y_hat),4))),4),4)
-
-    return Z1, y_hat, loss
-
-
-def get_gradients_Activation(_params):
-    W1, B1 = _params
-    Z1, y_hat, loss = loss_eval_Activation([W1, B1])
-
-    err=y_hat-y_train
-    dZ = err*(1-err)
-
-    dW=np.dot(x_train, dZ.T)
-
-    dB=1./x_train.shape[0] * np.sum(dZ ,axis=1, keepdims=True)
-    #print(dB)
-
-    return [dW, dB], loss
+    loss = 1. / x_test.shape[1] * np.sum(-1 * (y_test * np.log(Y_hat) + (1 - y_test) * np.log(1 - Y_hat)))
+    return Z1, H, Z2, Y_hat, loss
 
 
-def optimize_tanh(_params, learning_rate=0.1, iteration=1000, sample_size=0):
+loss_eval([W1, B1, W2, B2])[-1]
+
+
+def get_gradients(_params):
+    W1, B1, W2, B2 = _params
+    m = x_test.shape[1]
+
+    Z1, H, Z2, Y_hat, loss = loss_eval([W1, B1, W2, B2])
+
+    # BackPropagate: Hidden Layer
+    dW2 = np.dot(H, (Y_hat - y_test).T)
+    dB2 = 1. / 4. * np.sum(Y_hat - y_test, axis=1, keepdims=True)
+    dH = np.dot(W2, Y_hat - y_test)
+
+    # BackPropagate: Input Layer
+    dZ1 = dH * H * (1 - H)
+    dW1 = np.dot(x_test, dZ1.T)
+    dB1 = 1. / 4. * np.sum(dZ1, axis=1, keepdims=True)
+
+    return [dW1, dB1, dW2, dB2], loss
+
+
+def optimize(_params, learning_rate=0.1, iteration=1000, sample_size=0):
     params = np.copy(_params)
+
     loss_trace = []
 
     for epoch in range(iteration):
-        dparams, loss = get_gradients_Activation(params)
+
+        dparams, loss = get_gradients(params)
+
         for param, dparam in zip(params, dparams):
             param += - learning_rate * dparam
-
 
         if (epoch % 100 == 0):
             loss_trace.append(loss)
 
-    _, Y_hat_predict, _ = loss_eval_Activation(params)
+    _, _, _, Y_hat_predict, _ = loss_eval(params)
 
-    #print(Y_hat_predict)
     return params, loss_trace, Y_hat_predict
 
+params = init_random_parameters(2)
+new_params, loss_trace, Y_hat_predict = optimize(params, 0.1, 100000, 0)
+#print(Y_hat_predict.shape)
+#print()
+print(np.mean(Y_hat_predict))
 
-params = init_random_parameters(1)
-new_params, loss_trace, Y_hat_predict = optimize_tanh(params, 0.1, 5000)
-print(f"new_params:\n{new_params}\nloss:\n{loss_trace}\nY_hat:")
-print(Y_hat_predict)
-print(loss_trace[-1])
-# Plot learning curve (with costs)
+print("*"*80)
+print(new_params)
+
+def stepfunc(val):
+    cri=np.mean(val)+0.01
+    print(cri)
+    result=[]
+    countI=0
+    count0=0
+    for sign in val:
+        for each in sign:
+
+            if float(each)>cri:
+                result.append('1')
+                countI+=1
+            else:
+                result.append('0')
+                count0+=1
+    print(countI)
+    print(count0)
+    result=np.array(result).reshape(1,x_test.shape[1])
+    return result
+result = stepfunc(Y_hat_predict)
+print("result:\n",result)
 plt.plot(loss_trace)
 plt.ylabel('loss')
 plt.xlabel('iterations (per hundreds)')

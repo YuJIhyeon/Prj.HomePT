@@ -1,5 +1,6 @@
 import numpy as np
 from sklearn.linear_model import LogisticRegression
+import time
 
 Data = dict()
 def get_input_data(filename):
@@ -138,7 +139,8 @@ def main():
     TestD=TestData()
     x_test, y_test=GenerateTDataForm(TestD)
 
-    softmax_reg = LogisticRegression(multi_class='multinomial', solver='lbfgs', max_iter=200, random_state=23)
+    start=time.time()
+    softmax_reg = LogisticRegression(multi_class='multinomial', solver='lbfgs', max_iter=200, random_state=40)
     softmax_reg.fit((x_train), (y_train))
 
     softmax_reg.fit((x_val), (y_val))
@@ -147,8 +149,9 @@ def main():
     print(Result)
 
     Score=softmax_reg.score((x_test), (y_test))
+    print(softmax_reg.class_weight)
     print(Score)
-    print()
-    print(Data)
+
+    print("runtime=",round((time.time()-start),2))
 if __name__ == '__main__':
     main()
