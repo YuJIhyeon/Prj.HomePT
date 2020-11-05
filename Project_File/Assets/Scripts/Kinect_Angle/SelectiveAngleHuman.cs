@@ -12,17 +12,17 @@ public class SelectiveAngleHuman : FBX
 
     public override void OnUpdate()
     {
-        if (IsJoint(JointType.SpineBase))
+        if (!IsJoint(JointType.SpineBase))
         {
             UpdateBone(Avateering.SpineBase);
         }
 
-        if (IsJoint(JointType.SpineMid))
+        if (!IsJoint(JointType.SpineMid))
         {
             UpdateBone(Avateering.SpineMid);
         }
 
-        if (IsJoint(JointType.Neck))
+        if (!IsJoint(JointType.Neck))
         {
             UpdateBone(Avateering.Neck);
         }
@@ -40,41 +40,41 @@ public class SelectiveAngleHuman : FBX
             UpdateBone(Avateering.WristLeft, 7);
         }
 
-        if (IsJoint(JointType.ShoulderRight))
+        if (!IsJoint(JointType.ShoulderRight))
         {
             UpdateBone(Avateering.ShoulderRight);
         }
-        if (IsJoint(JointType.ElbowRight))
+        if (!IsJoint(JointType.ElbowRight))
         {
             UpdateBone(Avateering.ElbowRight);
         }
-        if (IsJoint(JointType.WristRight))
+        if (!IsJoint(JointType.WristRight))
         {
             UpdateBone(Avateering.WristRight, 7);
         }
 
-        if (IsJoint(JointType.HipLeft))
+        if (!IsJoint(JointType.HipLeft))
         {
             UpdateBone(Avateering.HipLeft);
         }
-        if (IsJoint(JointType.KneeLeft))
+        if (!IsJoint(JointType.KneeLeft))
         {
             UpdateBone(Avateering.KneeLeft);
         }
-        if (IsJoint(JointType.AnkleLeft))
+        if (!IsJoint(JointType.AnkleLeft))
         {
             UpdateBone(Avateering.AnkleLeft, 7);
         }
 
-        if (IsJoint(JointType.HipRight))
+        if (!IsJoint(JointType.HipRight))
         {
             UpdateBone(Avateering.HipRight);
         }
-        if (IsJoint(JointType.KneeRight))
+        if (!IsJoint(JointType.KneeRight))
         {
             UpdateBone(Avateering.KneeRight);
         }
-        if (IsJoint(JointType.AnkleRight))
+        if (!IsJoint(JointType.AnkleRight))
         {
             UpdateBone(Avateering.AnkleRight, 7);
         }

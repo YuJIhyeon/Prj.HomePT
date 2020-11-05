@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import d2l
-from mxnet import autograd, nd
+
 
 Data = dict()
 def get_input_data(filename):
@@ -225,7 +224,7 @@ def init_random_parameters (num_hidden = 2):
 
 W1,B1,W2,B2=init_random_parameters ()
 
-Z1=affine(W1,x_test,B1)
+Z1=affine(W1,x_train,B1)
 H=sigmoid(Z1)
 
 Z2 = affine(W2,H, B2)
@@ -236,14 +235,14 @@ def loss_eval(_params):
     W1, B1, W2, B2 = _params
 
     # Forward: input Layer
-    Z1 = affine(W1, x_test, B1)
+    Z1 = affine(W1, x_train, B1)
     H = sigmoid(Z1)
 
     # Forward: Hidden Layer
     Z2 = affine(W2, H, B2)
     Y_hat = sigmoid(Z2)
 
-    loss = 1. / x_test.shape[1] * np.sum(-1 * (y_test * np.log(Y_hat) + (1 - y_test) * np.log(1 - Y_hat)))
+    loss = 1. / x_train.shape[1] * np.sum(-1 * (y_train * np.log(Y_hat) + (1 - y_train) * np.log(1 - Y_hat)))
     return Z1, H, Z2, Y_hat, loss
 
 
@@ -252,18 +251,18 @@ loss_eval([W1, B1, W2, B2])[-1]
 
 def get_gradients(_params):
     W1, B1, W2, B2 = _params
-    m = x_test.shape[1]
+    m = x_train.shape[1]
 
     Z1, H, Z2, Y_hat, loss = loss_eval([W1, B1, W2, B2])
 
     # BackPropagate: Hidden Layer
-    dW2 = np.dot(H, (Y_hat - y_test).T)
-    dB2 = 1. / 4. * np.sum(Y_hat - y_test, axis=1, keepdims=True)
-    dH = np.dot(W2, Y_hat - y_test)
+    dW2 = np.dot(H, (Y_hat - y_train).T)
+    dB2 = 1. / 4. * np.sum(Y_hat - y_train, axis=1, keepdims=True)
+    dH = np.dot(W2, Y_hat - y_train)
 
     # BackPropagate: Input Layer
     dZ1 = dH * H * (1 - H)
-    dW1 = np.dot(x_test, dZ1.T)
+    dW1 = np.dot(x_train, dZ1.T)
     dB1 = 1. / 4. * np.sum(dZ1, axis=1, keepdims=True)
 
     return [dW1, dB1, dW2, dB2], loss
@@ -297,6 +296,15 @@ print(np.mean(Y_hat_predict))
 print("*"*80)
 print(new_params)
 
+def softmax(a):
+    exp_a=np.exp(a)
+    sum_exp_a=np.sum(exp_a)
+    y=exp_a/sum_exp_a
+
+    return y
+
+#result=softmax(Y_hat)
+
 def stepfunc(val):
     cri=np.mean(val)+0.01
     print(cri)
@@ -314,7 +322,7 @@ def stepfunc(val):
                 count0+=1
     print(countI)
     print(count0)
-    result=np.array(result).reshape(1,x_test.shape[1])
+    result=np.array(result).reshape(1,x_train.shape[1])
     return result
 result = stepfunc(Y_hat_predict)
 print("result:\n",result)

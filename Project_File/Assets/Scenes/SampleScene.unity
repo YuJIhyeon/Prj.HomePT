@@ -1451,7 +1451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 240, y: 1.4752045}
+  m_AnchoredPosition: {x: 240, y: 1.4752197}
   m_SizeDelta: {x: 111.912964, y: 970.9806}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &263675115
@@ -6976,7 +6976,7 @@ SkinnedMeshRenderer:
   m_Mesh: {fileID: 4300002, guid: 51f1d9d1a4930964186764b8a192fb9d, type: 3}
   m_Bones: []
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 400152, guid: 51f1d9d1a4930964186764b8a192fb9d, type: 3}
+  m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0.00007799268, y: 0.804163, z: 0.016089998}
     m_Extent: {x: 0.77418697, y: 0.799155, z: 0.119979}
@@ -11135,7 +11135,6 @@ GameObject:
   - component: {fileID: 2075546971}
   - component: {fileID: 2075546970}
   - component: {fileID: 2075546969}
-  - component: {fileID: 2075546972}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -11201,30 +11200,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2075546972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075546968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41173daca41f9a64b8552925c6a3c363, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  address: 127.0.0.1
-  port: 7001
-  socketType: 0
-  actorID: 0
-  connectToAxis: 1
-  useNewRig: 1
-  boundAnimator: {fileID: 0}
-  motionUpdateMethod: 0
-  enableHipsMovement: 1
-  physicalReferenceOverride: {fileID: 0}
-  velocityMagic: 3000
-  angularVelocityMagic: 20
 --- !u!1 &2088008886
 GameObject:
   m_ObjectHideFlags: 0
@@ -12438,8 +12413,8 @@ MonoBehaviour:
   prevYRatio: 0
   keepScreenRatio: 1
   prevKeepScreenRatio: 1
-  currentScreenWidth: 708
-  currentScreenHeight: 398
+  currentScreenWidth: 752
+  currentScreenHeight: 423
 --- !u!114 &114659872069332263
 MonoBehaviour:
   m_ObjectHideFlags: 0

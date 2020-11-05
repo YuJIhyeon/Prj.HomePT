@@ -1,10 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
+using Windows.Kinect;
+using LightBuzz.Vitruvius;
 
 enum User_state
 {
@@ -21,6 +27,11 @@ public class UserPanel : MonoBehaviour
 
     private int reps;
     private int sets;
+    float period=0;
+
+    double RMS = 0;
+    double ANG = 0;
+    double Y_hat = 1;
 
     #region StopWatch
     float timer;
@@ -31,6 +42,7 @@ public class UserPanel : MonoBehaviour
     void Start()
     {
         initialUI();
+        period = 0;
     }
 
     void initialUI()
@@ -46,6 +58,8 @@ public class UserPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        period += Time.deltaTime;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (sets >= 5)
@@ -59,19 +73,45 @@ public class UserPanel : MonoBehaviour
             {
                 sets += 1;
                 timer = 0;
+                reps = 0;
                 user_state = User_state.exercising;
                 TimeText.text = "Time: 00:00:00";
             }
             else
             {
                 setText.text = "Sets: " + sets + " / 5";
+                
                 user_state = User_state.Idle;
             }
         }
 
         if(user_state == User_state.exercising)
         {
-            StopWatch();
+            StopWatch();         
+        }
+
+        if (user_state==User_state.exercising && period >= 2)  // 2 는 임의로 넣은것. saveFile의 public Period에서 가져와야함
+        {
+            period = 0;
+
+            RMS = (double)(Math.Round(ThalmicMyo.getRMS(),2));
+            ANG = (double)(Math.Round(AngleArc.angle, 2));
+            
+            //Debug.Log("RMS");
+            //Debug.Log("RMS: " + RMS.ToString());
+            //Debug.Log("ANG");
+            //Debug.Log("ANG: " + ANG.ToString());
+            
+            Y_hat = formal(RMS, ANG);
+            Debug.Log("Y_hat:" + Y_hat.ToString());
+            Debug.Log(Y_hat);
+            if (Y_hat <= 0.626)
+            {
+                reps += 1;
+                repText.text = "Reps: " + (reps-1).ToString() + " /10";
+                Y_hat = formal(RMS, ANG);
+            }
+
         }
     }
 
@@ -84,4 +124,27 @@ public class UserPanel : MonoBehaviour
 
         TimeText.text = "Time: " + minutes.ToString("00") + ":" + seconds.ToString("00") + ":" + milseconds.ToString("00");
     }
+
+
+    double sigmoid(double z)
+    {
+        return 1.0 / (1 + Math.Exp(-1 * z));
+    }
+
+    double formal(double RMS, double ANG)
+    {
+        //After first layer
+        double X1 = 6.01971921 * RMS - 15.7309641 * ANG - 4.82527526;
+        double X2 = -7.96912376 * RMS - 11.27525099 * ANG + 0.96991828;
+
+        double H1 = sigmoid(X1);
+        double H2 = sigmoid(X2);
+
+        double A = 5.18146232 * H1 - 5.8404422 * H2 + 0.5126402;
+
+        double Y_hat = sigmoid(A);
+
+        return Y_hat; 
+    }
+   
 }
