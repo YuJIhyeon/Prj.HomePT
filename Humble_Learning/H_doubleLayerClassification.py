@@ -81,6 +81,9 @@ def GenerateTrDataForm(data):
     normalRMS=(RMS-np.min(RMS))/(np.max(RMS)-np.min(RMS))
     normalANG=(ANG-np.min(ANG))/(np.max(ANG)-np.min(ANG))
 
+    print(f"minR:{np.min(RMS)},max-min{np.max(RMS)-np.min(RMS)}")
+    print(f"minA:{np.min(ANG)},max-min{np.max(ANG) - np.min(ANG)}")
+
     inData=np.hstack((normalRMS, normalANG))
 
     y_label=[]
@@ -208,6 +211,9 @@ x_test, y_test=GenerateTDataForm(TestD)
 x_test = x_test.transpose()
 y_test = np.array(y_test).reshape(1, len(y_test))
 # ===================================================================================
+#plt.plot(x_train.T)
+#plt.show()
+
 def affine (W, X, B):
     return np.dot(W.T, X) + B
 

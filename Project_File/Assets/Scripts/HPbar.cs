@@ -51,7 +51,7 @@ public class HPbar : MonoBehaviour
                 gradient.HP_FLAG = true;
                 if (curHp > 0)
                 {
-                    curHp -= ThalmicMyo.getRMS();
+                    curHp -= (float)UserPanel.RMS;
                     //Debug.Log("HP : " + HPbar.curHp);
                 }
                 else

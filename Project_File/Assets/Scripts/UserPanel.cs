@@ -29,9 +29,10 @@ public class UserPanel : MonoBehaviour
     private int sets;
     float period=0;
 
-    double RMS = 0;
-    double ANG = 0;
+    public static double RMS = 0;
+    public static double ANG = 0;
     double Y_hat = 1;
+    
 
     #region StopWatch
     float timer;
@@ -90,26 +91,26 @@ public class UserPanel : MonoBehaviour
             StopWatch();         
         }
 
-        if (user_state==User_state.exercising && period >= 2)  // 2 는 임의로 넣은것. saveFile의 public Period에서 가져와야함
+        if (user_state==User_state.exercising && period >= 2f)  // 2 는 임의로 넣은것. saveFile의 public Period에서 가져와야함
         {
             period = 0;
 
             RMS = (double)(Math.Round(ThalmicMyo.getRMS(),2));
             ANG = (double)(Math.Round(AngleArc.angle, 2));
             
-            //Debug.Log("RMS");
+            
             //Debug.Log("RMS: " + RMS.ToString());
-            //Debug.Log("ANG");
+            
             //Debug.Log("ANG: " + ANG.ToString());
             
             Y_hat = formal(RMS, ANG);
+            Debug.Log(RMS + "," + ANG);
             Debug.Log("Y_hat:" + Y_hat.ToString());
-            Debug.Log(Y_hat);
-            if (Y_hat <= 0.626)
+            if (Y_hat <= 0.625)
             {
                 reps += 1;
                 repText.text = "Reps: " + (reps-1).ToString() + " /10";
-                Y_hat = formal(RMS, ANG);
+                //Y_hat = formal(RMS, ANG);
             }
 
         }
@@ -133,9 +134,25 @@ public class UserPanel : MonoBehaviour
 
     double formal(double RMS, double ANG)
     {
+        //Normalize
+        if (RMS >= 5.47)
+        {
+            RMS = (RMS - 5.47) / (90.48);
+        }
+        else
+            RMS = 0;
+
+        if (ANG >= 36.23)
+        {
+            ANG = (ANG - 36.23) / (141.12);
+        }
+        else
+            ANG = 0;
+
         //After first layer
         double X1 = 6.01971921 * RMS - 15.7309641 * ANG - 4.82527526;
         double X2 = -7.96912376 * RMS - 11.27525099 * ANG + 0.96991828;
+        
 
         double H1 = sigmoid(X1);
         double H2 = sigmoid(X2);
