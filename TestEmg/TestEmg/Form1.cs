@@ -82,9 +82,9 @@ namespace TestEmg
                 //Color.Violet,
                 //Color.Purple,
                 //Color.Magenta,
-                //Color.Orange,
+                //Color.Orange
 
-                Color.Black
+               Color.Black
                // Color.ForestGreen
                 );
             m_CGrap2 = new Ojw.CGraph(lbDisp, lbDisp.Width, Color.White, null,
@@ -234,7 +234,7 @@ namespace TestEmg
                         //e.EmgData.GetDataForSensor(4),
                         //e.EmgData.GetDataForSensor(5),
                         //e.EmgData.GetDataForSensor(6),
-                        //e.EmgData.GetDataForSensor(7),
+                        //e.EmgData.GetDataForSensor(7)
 
                         data_rms
                         //(int)(Math.Round(HZ))
