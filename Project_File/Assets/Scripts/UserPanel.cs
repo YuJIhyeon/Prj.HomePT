@@ -63,12 +63,14 @@ public class UserPanel : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            /*
             if (sets >= 5)
             {
                 UI_Panel_Manager.srGroup(UI_Panel_Manager.End_Panel, UI_Panel_Manager.User_Panel);
                 UI_Panel_Manager.curState = DisplayState.End_main;
                 initialUI();
             }
+            */
 
             if (user_state == User_state.Idle)
             {
@@ -104,9 +106,9 @@ public class UserPanel : MonoBehaviour
             //Debug.Log("ANG: " + ANG.ToString());
             
             Y_hat = formal(RMS, ANG);
-            Debug.Log(RMS + "," + ANG);
+            //Debug.Log(RMS + "," + ANG);
             Debug.Log("Y_hat:" + Y_hat.ToString());
-            if (Y_hat <= 0.625)
+            if (Y_hat >= 0.6254)    //6248
             {
                 reps += 1;
                 repText.text = "Reps: " + (reps-1).ToString() + " /10";

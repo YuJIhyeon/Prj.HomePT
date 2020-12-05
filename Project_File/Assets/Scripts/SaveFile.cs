@@ -9,7 +9,7 @@ public class SaveFile : MonoBehaviour
     string filePath;
     bool writeFlag = false;
     float period = 0;
-    public float period_time = 2f;
+    public float period_time = 0.1f;
     int sec = 0;
     FileStream fs = null;
     StreamWriter sw = null;
@@ -30,7 +30,7 @@ public class SaveFile : MonoBehaviour
             //Debug.Log("Angle : " + AngleArc.angle);
             if (!writeFlag)
             {
-                filePath = "./HumbleData/Humble" + DateTime.Now.ToString("MMdd_HHmm") + ".txt";
+                filePath = "./HumbleData/Humble" + DateTime.Now.ToString("MMdd_HHmm_ss") + ".txt";
                 fs = new FileStream(filePath, FileMode.Create);
                 sw = new StreamWriter(fs);
                 writeFlag = true;
@@ -52,7 +52,7 @@ public class SaveFile : MonoBehaviour
         {
             sec += 1;
             period = 0;
-            sw.Write(sec + "\t" + ThalmicMyo.getRMS() + "\t" + Math.Round(AngleArc.angle, 2) + "\n");
+            sw.Write(sec*0.1 + "\t" + ThalmicMyo.getRMS() + "\t" + Math.Round(AngleArc.angle, 2) + "\n");
         }
     }
 }
