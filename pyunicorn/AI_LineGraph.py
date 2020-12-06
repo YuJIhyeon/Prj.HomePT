@@ -6,49 +6,191 @@
 
 from pyunicorn.timeseries.surrogates import Surrogates
 import numpy as np
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
-with open('Humble1121_1815.txt') as file:
-    row = []
-    for line in file:
-        sp = line.strip().split('\t')
-        row.append(list(map(float, sp[:3])))
+# Start biceps
+path_dir1 = 'C:/Users/Hojin/Desktop/Prj.HomePT/pyunicorn/data_2do'
+file_list1 = os.listdir(path_dir1)
 
-t = []
-data1 = []
-data2 = []
-for r in np.array(row):
-    t.append(r[0])
-    data1.append(r[1])
-    data2.append(r[2])
+# Biceps original data
+cnt = 0
+for file_name in file_list1:
+    sp = list()
+    with open('./data_2do/'+file_name) as file:
+        row = []
+        for line in file:
+            if line == '\n':
+                break
+            sp = line.strip().split('\t')
+            row.append(list(map(float, sp[:3])))
 
-td = np.array([])
-td = np.append(td, t, axis=0)
-td = np.vstack([td, data1])
-td = np.vstack([td, data2])
+    sp.clear()
 
-# AAFT
-d = Surrogates(original_data=td, silence_level=2).AAFT_surrogates(td)
+    t = []
+    rms = []
+    angle = []
+    for r in np.array(row):
+        t.append(r[0])
+        rms.append(r[1])
+        angle.append(r[2])
 
-#IAAFT
-#d = Surrogates(original_data=td, silence_level=2).refined_AAFT_surrogates(td,10000)
+    count = len(rms)
 
+    tIndex = np.linspace(0, count / 10, count)
 
-rms = d[1]
-angle = d[2]
+    plt.ylabel("Amplitude")
+    plt.xlabel("Time [s]")
+    plt.ylim(0, 180)
+    plt.plot(tIndex, rms, tIndex, angle, 'r-')
+    plt.savefig('./result_original_2do/' + str(cnt) + '.png')
+    cnt += 1
 
-count = len(rms)
+    plt.cla()
+    row.clear()
 
-tIndex = np.linspace(0, count/10, count)
+# Biceps augmentation
+cnt = 0
+for file_name in file_list1:
+    sp = list()
+    with open('./data_2do/'+file_name) as file:
+        row = []
+        for line in file:
+            if line == '\n':
+                break
+            sp = line.strip().split('\t')
+            row.append(list(map(float, sp[:3])))
 
+    sp.clear()
 
-plt.ylabel("Amplitude")
-plt.xlabel("Time [s]")
-plt.plot(tIndex, rms, tIndex, angle, 'r-')
-plt.show()
+    t = []
+    data1 = []
+    data2 = []
+    for r in np.array(row):
+        t.append(r[0])
+        data1.append(r[1])
+        data2.append(r[2])
 
+    td = np.array([])
+    td = np.append(td, t, axis=0)
+    td = np.vstack([td, data1])
+    td = np.vstack([td, data2])
 
+    # AAFT
+    d = Surrogates(original_data=td, silence_level=2).AAFT_surrogates(td)
+
+    # IAAFT
+    #d = Surrogates(original_data=td, silence_level=2).refined_AAFT_surrogates(td,10000)
+
+    rms = d[1]
+    angle = d[2]
+
+    count = len(rms)
+
+    tIndex = np.linspace(0, count / 10, count)
+
+    plt.ylabel("Amplitude")
+    plt.xlabel("Time [s]")
+    plt.ylim(0, 180)
+    plt.plot(tIndex, rms, tIndex, angle, 'r-')
+    plt.savefig('./result_augmentation_2do/' + str(cnt) + '.png')
+    cnt += 1
+
+    plt.cla()
+    row.clear()
+
+# Triceps
+path_dir2 = 'C:/Users/Hojin/Desktop/Prj.HomePT/pyunicorn/data_3do'
+file_list2 = os.listdir(path_dir2)
+
+# Triceps original data
+cnt = 0
+for file_name in file_list2:
+    sp = list()
+    with open('./data_3do/'+file_name) as file:
+        row = []
+        for line in file:
+            if line == '\n':
+                break
+            sp = line.strip().split('\t')
+            row.append(list(map(float, sp[:3])))
+
+    sp.clear()
+
+    t = []
+    rms = []
+    angle = []
+    for r in np.array(row):
+        t.append(r[0])
+        rms.append(r[1])
+        angle.append(r[2])
+
+    count = len(rms)
+
+    tIndex = np.linspace(0, count / 10, count)
+
+    plt.ylabel("Amplitude")
+    plt.xlabel("Time [s]")
+    plt.ylim(0, 180)
+    plt.plot(tIndex, rms, tIndex, angle, 'r-')
+    plt.savefig('./result_original_3do/' + str(cnt) + '.png')
+    cnt += 1
+
+    plt.cla()
+    row.clear()
+
+# Triceps data augmentation
+cnt = 0
+for file_name in file_list2:
+    sp = list()
+    with open('./data_3do/'+file_name) as file:
+        row = []
+        for line in file:
+            if line == '\n':
+                break
+            sp = line.strip().split('\t')
+            row.append(list(map(float, sp[:3])))
+
+    sp.clear()
+
+    t = []
+    data1 = []
+    data2 = []
+    for r in np.array(row):
+        t.append(r[0])
+        data1.append(r[1])
+        data2.append(r[2])
+
+    td = np.array([])
+    td = np.append(td, t, axis=0)
+    td = np.vstack([td, data1])
+    td = np.vstack([td, data2])
+
+    # AAFT
+    d = Surrogates(original_data=td, silence_level=2).AAFT_surrogates(td)
+
+    # IAAFT
+    # d = Surrogates(original_data=td, silence_level=2).refined_AAFT_surrogates(td,10000)
+
+    rms = d[1]
+    angle = d[2]
+
+    count = len(rms)
+
+    tIndex = np.linspace(0, count / 10, count)
+
+    plt.ylabel("Amplitude")
+    plt.xlabel("Time [s]")
+    plt.ylim(0, 180)
+    plt.plot(tIndex, rms, tIndex, angle, 'r-')
+    plt.savefig('./result_augmentation_3do/' + str(cnt) + '.png')
+    cnt += 1
+
+    plt.cla()
+    row.clear()
+
+print("Finished")
 # In[ ]:
 
 
