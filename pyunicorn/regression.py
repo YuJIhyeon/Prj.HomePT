@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 
 
-def copy_demesion_2_list(input_list):
+def copy_dimesion_2_list(input_list):
     output_list = []
     for row in input_list:
         output_list.append(row.copy())
@@ -31,7 +31,7 @@ def input_file(file_list, data_type):
                 rms_data_set[count].append(float(sp[1]))
                 ang_data_set[count].append(float(sp[2]))
                 count += 1
-            each_row = copy_demesion_2_list(each_row)
+            each_row = copy_dimesion_2_list(each_row)
             each_result_data.append(each_row)
     rms_data_set = np.array(rms_data_set.copy())
     ang_data_set = np.array(ang_data_set.copy())
@@ -76,7 +76,7 @@ def print_graph(each_datas, merge_data, type, title):
     plt.title(f"{title} : {type}")
     plt.show()
 
-def output_data(each_data_1, merge_data, type):
+def output_data(each_data_1, merge_data, type, title):
     t_X = np.array(each_data_1[0][0])
 
     if type == 'rms':
@@ -101,6 +101,21 @@ def output_data(each_data_1, merge_data, type):
 
     lin_reg.fit(X_poly, y)
 
+    #t_X = t_X.reshape((-1, 1))
+    #print(lin_reg.predict(X_poly))
+
+
+    file = open(f"./output_regression/{title}_{type}.txt", 'w')
+    data_range = lin_reg.predict(X_poly)
+    prev = [-100]
+    for data in data_range:
+        if prev == data:
+            continue
+        prev = data
+        file.write(f"{data[0]}\n")
+    file.close()
+
+
     #print(lin_reg.predict(X_poly))
 
 
@@ -113,18 +128,18 @@ def main():
     each_data_1, merge_data_1 = input_file(file_list1, 'data_2do')
     each_data_2, merge_data_2 = input_file(file_list2, 'data_3do')
 
-    '''
-    output_data(each_data_1, merge_data_1, 'rms')
-    output_data(each_data_1, merge_data_1, 'ang')
-    output_data(each_data_2, merge_data_2, 'rms')
-    output_data(each_data_2, merge_data_2, 'ang')
-    '''
 
+    output_data(each_data_1, merge_data_1, 'rms', '2do')
+    output_data(each_data_1, merge_data_1, 'ang', '2do')
+    output_data(each_data_2, merge_data_2, 'rms', '3do')
+    output_data(each_data_2, merge_data_2, 'ang', '3do')
+
+    '''
     print_graph(each_data_1, merge_data_1, 'rms', 'Biceps')
     print_graph(each_data_1, merge_data_1, 'ang', 'Biceps')
-
     print_graph(each_data_2, merge_data_2, 'rms', 'Triceps')
     print_graph(each_data_2, merge_data_2, 'ang', 'Triceps')
+    '''
 
 main()
 
