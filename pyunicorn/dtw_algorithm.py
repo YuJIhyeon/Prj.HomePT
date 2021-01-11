@@ -36,7 +36,7 @@ def create_folder(filepath, folder_name):
 def input_dynamic_file(file_name, data_type):
     rms = []
     angle = []
-    with open('./' + data_type + '/' + file_name) as file:
+    with open(data_type + '/' + file_name) as file:
         for line in file:
             line = line.split()
             if line == []:
@@ -102,8 +102,7 @@ def print_dtw_begin(file_type, ex_2do_rms, ex_2do_ang, ex_3do_rms, ex_3do_ang):
         start_dtw(file_name, ex_3do_ang, file_type, 'ang')
 
 def dtw_begin(file_type, ex_2do_rms, ex_2do_ang, ex_3do_rms, ex_3do_ang):
-    path_dir = './'+file_type
-    file_list = os.listdir(path_dir)
+    file_list = os.listdir(file_type)
 
     data_medoid = [[], 0, [], 0]
 
@@ -178,22 +177,26 @@ def predict_data(input_data_folder, input_data_file, data_2do_medoid, data_3do_m
         return label[2]
 
 def main():
-    path_dir = './output_regression'
+    path_dir = 'C:/Users/Neurorobotics/Desktop/Prj.HomePT/pyunicorn/output_regression'
     file_list = os.listdir(path_dir)
     ex_2do_rms, ex_2do_ang, ex_3do_rms, ex_3do_ang = input_file(path_dir, file_list)
-    data_2do_medoid = dtw_begin('dynamic_2do', ex_2do_rms, ex_2do_ang, ex_3do_rms, ex_3do_ang)
-    data_3do_medoid = dtw_begin('dynamic_3do', ex_2do_rms, ex_2do_ang, ex_3do_rms, ex_3do_ang)
+    data_2do_medoid = dtw_begin('C:/Users/Neurorobotics/Desktop/Prj.HomePT/pyunicorn/dynamic_2do', ex_2do_rms, ex_2do_ang, ex_3do_rms, ex_3do_ang)
+    data_3do_medoid = dtw_begin('C:/Users/Neurorobotics/Desktop/Prj.HomePT/pyunicorn/dynamic_3do', ex_2do_rms, ex_2do_ang, ex_3do_rms, ex_3do_ang)
 
-    input_data_folder = 'dynamic_3do'
-    input_data_file = '2.txt'
+    input_data_folder = 'C:/Users/Neurorobotics/Desktop/Prj.HomePT/Project_File/HumbleData'
+    input_data_file = os.listdir(input_data_folder).pop()
 
     pre_res = predict_data(input_data_folder, input_data_file, data_2do_medoid, data_3do_medoid, ex_2do_rms, ex_2do_ang, ex_3do_rms, ex_3do_ang)
-    print(pre_res)
+    #print(pre_res)
 
+    file = open('C:/Users/Neurorobotics/Desktop/Prj.HomePT/pyunicorn/predict.txt', 'w')
+    file.write(pre_res)
+    file.close()
     #print_dtw_begin('dynamic_2do', ex_2do_rms, ex_2do_ang, ex_3do_rms, ex_3do_ang)
     #print_dtw_begin('dynamic_3do', ex_2do_rms, ex_2do_ang, ex_3do_rms, ex_3do_ang)
 
     #time_stamp = [float(i / 10) for i in range(1, 21)]
 
-main()
+if __name__ == '__main__':
+    main()
 

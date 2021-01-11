@@ -40,7 +40,7 @@ public class SelectiveAngleHuman : FBX
             UpdateBone(Avateering.WristLeft, 7);
         }
 
-        if (!IsJoint(JointType.ShoulderRight))
+        if (IsJoint(JointType.ShoulderRight))
         {
             UpdateBone(Avateering.ShoulderRight);
         }

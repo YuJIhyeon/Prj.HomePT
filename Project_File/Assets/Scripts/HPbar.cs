@@ -33,6 +33,7 @@ public class HPbar : MonoBehaviour
                 maxHp = Measure.maxRms * 120;
                 hpBar.value = 1;
                 Debug.Log("MAX_hp : " + maxHp);
+                SaveFile.start = true;
             }
         }
         else
@@ -43,6 +44,7 @@ public class HPbar : MonoBehaviour
             {
                 ThalmicMyo.change_CollectFlag();
                 curHp = maxHp;
+                SaveFile.start = true;
             }
 
             if (period > 0.1f && ThalmicMyo.collection_flag)    //1차: spacebar keydown이 있을경우 hpBar가 10씩 떨어짐 >> 팔의 움직임을 조건으로 걸어 떨어지는 수치 변경

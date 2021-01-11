@@ -28,6 +28,7 @@ public class UserPanel : MonoBehaviour
     private int reps;
     private int sets;
     float period=0;
+    public static bool do_raps = false;
 
     public static double RMS = 0;
     public static double ANG = 0;
@@ -79,11 +80,13 @@ public class UserPanel : MonoBehaviour
                 reps = 0;
                 user_state = User_state.exercising;
                 TimeText.text = "Time: 00:00:00";
+                do_raps = false;
+                SaveFile.start = false;
             }
             else
             {
                 setText.text = "Sets: " + sets + " / 5";
-                
+                do_raps = true;
                 user_state = User_state.Idle;
             }
         }
@@ -93,7 +96,7 @@ public class UserPanel : MonoBehaviour
             StopWatch();         
         }
 
-        if (user_state==User_state.exercising && period >= 2f)  // 2 는 임의로 넣은것. saveFile의 public Period에서 가져와야함
+        if (user_state==User_state.exercising && period >= 2f)
         {
             period = 0;
 
@@ -107,10 +110,11 @@ public class UserPanel : MonoBehaviour
             
             Y_hat = formal(RMS, ANG);
             //Debug.Log(RMS + "," + ANG);
-            Debug.Log("Y_hat:" + Y_hat.ToString());
+            //Debug.Log("Y_hat:" + Y_hat.ToString());
             if (Y_hat >= 0.6254)    //6248
             {
                 reps += 1;
+                do_raps = true;
                 repText.text = "Reps: " + (reps-1).ToString() + " /10";
                 //Y_hat = formal(RMS, ANG);
             }
