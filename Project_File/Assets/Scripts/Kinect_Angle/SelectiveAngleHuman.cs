@@ -22,7 +22,7 @@ public class SelectiveAngleHuman : FBX
             UpdateBone(Avateering.SpineMid);
         }
 
-        if (!IsJoint(JointType.Neck))
+        if (IsJoint(JointType.Neck))
         {
             UpdateBone(Avateering.Neck);
         }

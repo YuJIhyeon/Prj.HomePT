@@ -119,13 +119,16 @@ public class ThalmicMyo : MonoBehaviour {
         for (int i = 0; i < _myo.emgData.Length; i++)
         {
             RMS += Mathf.Pow(_myo.emgData[i], 2);
-        }
+            ED[i] = _myo.emgData[i];
+        } 
 
         RMS = Mathf.Sqrt(RMS / 8);
         RMS = (float)System.Math.Round((double)RMS, 2);
-
+        
         return RMS;
     }
+
+    public static int[] ED = new int[8];
     private static float INT = 0;
     private static float RMS = 0;
     public static bool collection_flag = false;

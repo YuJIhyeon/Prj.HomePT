@@ -64,18 +64,19 @@ public class UserPanel : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            /*
+            
+            //recomand
             if (sets >= 5)
             {
                 UI_Panel_Manager.srGroup(UI_Panel_Manager.End_Panel, UI_Panel_Manager.User_Panel);
                 UI_Panel_Manager.curState = DisplayState.End_main;
                 initialUI();
             }
-            */
+            
 
             if (user_state == User_state.Idle)
             {
-                sets += 1;
+                //sets += 1;
                 timer = 0;
                 reps = 0;
                 user_state = User_state.exercising;
@@ -86,6 +87,7 @@ public class UserPanel : MonoBehaviour
             else
             {
                 setText.text = "Sets: " + sets + " / 5";
+                repText.text = "Reps: 0 / 10";
                 do_raps = true;
                 user_state = User_state.Idle;
             }
@@ -106,12 +108,12 @@ public class UserPanel : MonoBehaviour
             
             //Debug.Log("RMS: " + RMS.ToString());
             
-            //Debug.Log("ANG: " + ANG.ToString());
+            Debug.Log("ANG: " + ANG.ToString());
             
             Y_hat = formal(RMS, ANG);
             //Debug.Log(RMS + "," + ANG);
             //Debug.Log("Y_hat:" + Y_hat.ToString());
-            if (Y_hat >= 0.6254)    //6248
+            if (Y_hat >= 0.6254)    //6248 , 6254
             {
                 reps += 1;
                 do_raps = true;
