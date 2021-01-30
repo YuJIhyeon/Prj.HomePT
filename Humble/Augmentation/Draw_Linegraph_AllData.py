@@ -39,11 +39,13 @@ for index, fn in enumerate(filename):
             data1.append(r[1])
             # r[2] = angle
             data2.append(r[2])
-
+        print(data1)
+        print(data2)
         td = np.array([])
         td = np.append(td, t, axis=0)
         td = np.vstack([td, data1])
         td = np.vstack([td, data2])
+
 
         # 하나의 데이터에 대해 AAFT(IAAFT) 를 100번 진행하여 100개의 뻥튀기 된 데이터를 생성 후 시각화를 진행 함
         for i in range(100):
@@ -65,5 +67,6 @@ for index, fn in enumerate(filename):
             plt.axis('off')
             plt.tick_params(axis='both', left='off', top='off', right='off', bottom='off', labelleft='off',
                             labeltop='off', labelright='off', labelbottom='off')
+            plt.show()
             plt.savefig('AAFT/LineGraph/Bi/linegraph_' + str(index * 100 + i) + '.png', pad_inches=0)
             plt.cla()

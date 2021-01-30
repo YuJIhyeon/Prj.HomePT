@@ -19,7 +19,89 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7084d6cb-50d9-4ccc-956b-eba73729b544" name="Default Changelist" comment="" />
+    <list default="true" id="7084d6cb-50d9-4ccc-956b-eba73729b544" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Humble/Augmentation/Make_raw_augmentation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Prj.HomePT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Prj.HomePT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_13.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_14.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_15.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_17.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_18.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_19.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_20.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_21.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_22.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_23.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_24.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_25.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_26.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_26.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_27.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_27.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_28.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_28.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_29.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_30.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_31.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_31.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_33.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_33.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_34.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_34.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_35.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_35.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_36.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_36.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_37.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_37.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/Angle/CWT_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_12.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_13.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_14.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_15.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_17.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_18.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_19.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_20.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_21.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_22.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_23.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_24.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_25.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_26.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_26.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_27.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_27.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_28.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_28.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_29.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_30.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_31.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_31.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_33.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_33.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_34.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_34.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_35.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_35.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_36.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_36.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_37.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_37.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/AAFT/CWT/Tri/RMS/CWT_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Humble/Augmentation/Draw_Linegraph_AllData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Humble/Augmentation/Draw_Linegraph_AllData.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,11 +125,34 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.H_doubleLayerClassification">
-    <configuration name="H_classification" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Make_raw_augmentation">
+    <configuration name="Draw_CWT_AllData" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Prj.HomePT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\Humble\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Humble/Augmentation" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Humble/Augmentation/Draw_CWT_AllData.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Draw_Linegraph_AllData" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Prj.HomePT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -55,12 +160,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Humble_Learning" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Humble/Augmentation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Humble_Learning/H_classification.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Humble/Augmentation/Draw_Linegraph_AllData.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -83,6 +187,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Humble_Learning/H_doubleLayerClassification.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Make_raw_augmentation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Prj.HomePT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Humble/Augmentation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Humble/Augmentation/Make_raw_augmentation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -115,9 +240,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Make_raw_augmentation" />
+        <item itemvalue="Python.Draw_Linegraph_AllData" />
+        <item itemvalue="Python.Draw_CWT_AllData" />
         <item itemvalue="Python.H_doubleLayerClassification" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.H_classification" />
       </list>
     </recent_temporary>
   </component>
@@ -152,40 +279,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1604387935653">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604387935653" />
-    <state width="922" height="214" key="GridCell.Tab.0.bottom" timestamp="1604635327885">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="922" height="214" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604635327885" />
-    <state width="922" height="214" key="GridCell.Tab.0.center" timestamp="1604635327885">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="922" height="214" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604635327885" />
-    <state width="922" height="214" key="GridCell.Tab.0.left" timestamp="1604635327885">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="922" height="214" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604635327885" />
-    <state width="922" height="214" key="GridCell.Tab.0.right" timestamp="1604635327885">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="922" height="214" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604635327885" />
-    <state x="953" y="0" width="974" height="1047" key="dock-window-1" timestamp="1605686717459">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="953" y="0" width="974" height="1047" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1605686717459" />
-    <state x="-7" y="0" width="968" height="1047" key="dock-window-2" timestamp="1604622855214">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-7" y="0" width="968" height="1047" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1604622855214" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Prj_HomePT$test.coverage" NAME="test Coverage Results" MODIFIED="1604622620500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Humble_Learning" />
-    <SUITE FILE_PATH="coverage/Prj_HomePT$H_classification.coverage" NAME="H_classification Coverage Results" MODIFIED="1604390467686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Humble_Learning" />
-    <SUITE FILE_PATH="coverage/Prj_HomePT$H_doubleLayerClassification.coverage" NAME="H_doubleLayerClassification Coverage Results" MODIFIED="1604623257303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Humble_Learning" />
   </component>
 </project>
