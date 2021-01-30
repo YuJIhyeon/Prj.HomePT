@@ -17,7 +17,7 @@ import cv2
 
 image_size = 227
 
-groups_folder_path = './AAFT/Gramian/'
+groups_folder_path = '../Augmentation/AAFT/Gramian/'
 
 X_r = []
 X_a = []
@@ -42,8 +42,6 @@ for label in ['Bi', 'Tri']:
                         y.append(2)
                     else:
                         y.append(3)
-
-print(X_r[0].shape)
 
 # Gramian의 경우 RMS 와 Angle을 2겹으로 진행
 

@@ -17,7 +17,7 @@ import cv2
 
 image_size = 227
 
-groups_folder_path = './AAFT/CWT/'
+groups_folder_path = '../Augmentation/AAFT/CWT/'
 
 X_r = []
 X_a = []
