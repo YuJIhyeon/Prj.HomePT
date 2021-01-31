@@ -6,28 +6,12 @@ def resize_image(image_path, save_path):
     after_img = image.resize((227,227))
     after_img.save(save_path+'.png')
 
-image_path = './biceps/'
-save_path = '../After_image/biceps/'
-for top, dir, files in os.walk(image_path):
-    for i, file in enumerate(files):
-        resize_image(image_path+file, save_path+str(i))
-
-image_path = './triceps/'
-save_path = '../After_image/triceps/'
-for top, dir, files in os.walk(image_path):
-    for i, file in enumerate(files):
-        resize_image(image_path+file, save_path+str(i))
-
-image_path = './biceps_midAng/'
-save_path = '../After_image/biceps_midAng/'
-for top, dir, files in os.walk(image_path):
-    for i, file in enumerate(files):
-        resize_image(image_path+file, save_path+str(i))
-
-image_path = './triceps_midAng/'
-save_path = '../After_image/triceps_midAng/'
-for top, dir, files in os.walk(image_path):
-    for i, file in enumerate(files):
-        resize_image(image_path+file, save_path+str(i))
+img_type = ['biceps_bw', 'biceps_color', 'biceps_midAng_bw', 'biceps_midAng_color', 'triceps_bw', 'triceps_color', 'triceps_midAng_bw', 'triceps_midAng_color']
+base_path = '../Before_AAFT/'
+save_path = '../After_AAFT/'
+for folder in img_type:
+    for top, dir, files in os.walk(base_path+folder):
+        for i, file in enumerate(files):
+            resize_image(base_path + folder + '/' + file, save_path + folder + '/' + str(i))
 
 #resize_image()

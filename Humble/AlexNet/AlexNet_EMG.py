@@ -17,7 +17,7 @@ import cv2
 
 image_size = 227
 
-groups_folder_path = '../Images/After_image/'
+groups_folder_path = '../Images/After_AAFT/'
 
 X_s = []
 
@@ -87,8 +87,8 @@ AlexNet.compile(loss=keras.losses.sparse_categorical_crossentropy,
               optimizer=keras.optimizers.SGD(learning_rate=0.01),
               metrics=[keras.metrics.sparse_categorical_accuracy])
 
-AlexNet_history = AlexNet.fit(X_train, y_train, epochs=30,
+AlexNet_history = AlexNet.fit(X_train, y_train, epochs=100,
                     validation_data=(X_validation, y_validation))
 
-AlexNet_history = AlexNet.fit(X_train, y_train, epochs=5,
+AlexNet_history = AlexNet.fit(X_train, y_train, epochs=10,
                     validation_data=(X_test, y_test))
