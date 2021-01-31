@@ -45,11 +45,11 @@ for index, fn in enumerate(filename):
             td = np.vstack([td, ch[i]])
         td = np.vstack([td, angle])
 
-        for i in range(20):
+        for i in range(10):
             file_index += 1
             d = Surrogates(original_data=td, silence_level=2).AAFT_surrogates(td)
 
-            fw = open('./AAFT/Raw_data/Bi/'+str(file_index)+'.txt', 'w')
+            fw = open('./AAFT/Raw_data_10/Bi/'+str(file_index)+'.txt', 'w')
             for num in range(len(d[0])):
                 fw.write(str(num)+"\t"+str(d[1][num])+"\t"+str(d[2][num])+"\t"+str(d[3][num])+"\t"+str(d[4][num])+"\t"+
                       str(d[5][num])+"\t"+str(d[6][num])+"\t"+str(d[7][num])+"\t"+str(d[8][num])+"\t"+str(d[9][num])+"\n")

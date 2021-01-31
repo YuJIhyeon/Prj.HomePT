@@ -4,12 +4,9 @@ from tensorflow import keras
 import numpy as np
 import matplotlib.pyplot as plt
 
-from tensorflow.compat.v1 import ConfigProto
-from tensorflow.compat.v1 import InteractiveSession
-
-config = ConfigProto()
-config.gpu_options.allow_growth = 0.4
-session = InteractiveSession(config=config)
+config = tf.compat.v1.ConfigProto()
+config.gpu_options.per_process_gpu_memory_fraction = 0.4
+session = tf.compat.v1.InteractiveSession(config=config)
 
 # 파일 불러오기
 import os, re, glob
@@ -66,18 +63,26 @@ X_train, X_validation, y_train, y_validation = train_test_split(X_train, y_train
 
 AlexNet = keras.models.Sequential([
         keras.layers.Conv2D(256, (6, 6), activation='relu', input_shape=X_train[0].shape),
-        keras.layers.BatchNormalization(),
         keras.layers.MaxPooling2D( (2, 2) ),
-        keras.layers.Conv2D(384, (3, 3), padding='same', activation='relu'),
         keras.layers.BatchNormalization(),
+
+
         keras.layers.Conv2D(384, (3, 3), padding='same', activation='relu'),
+        keras.layers.MaxPooling2D( (2, 2) ),
         keras.layers.BatchNormalization(),
+
+        keras.layers.Conv2D(384, (3, 3), padding='same', activation='relu'),
+        keras.layers.MaxPooling2D( (2, 2) ),
+        keras.layers.BatchNormalization(),
+
         keras.layers.Conv2D(256, (3, 3), padding='same', activation='relu'),
-        keras.layers.BatchNormalization(),
         keras.layers.MaxPooling2D( (2, 2) ),
+        keras.layers.BatchNormalization(),
+
         keras.layers.Flatten(),
         keras.layers.Dense(1024, activation='relu'),
         keras.layers.Dense(1024, activation='relu'),
+
         keras.layers.Dense(len(y_train), activation='softmax')
 ])
 
@@ -87,8 +92,10 @@ AlexNet.compile(loss=keras.losses.sparse_categorical_crossentropy,
               optimizer=keras.optimizers.SGD(learning_rate=0.01),
               metrics=[keras.metrics.sparse_categorical_accuracy])
 
-AlexNet_history = AlexNet.fit(X_train, y_train, epochs=100,
+AlexNet_history = AlexNet.fit(X_train, y_train, epochs=100, batch_size=16,
                     validation_data=(X_validation, y_validation))
 
-AlexNet_history = AlexNet.fit(X_train, y_train, epochs=10,
+AlexNet_history = AlexNet.fit(X_train, y_train, epochs=10, batch_size=16,
                     validation_data=(X_test, y_test))
+
+AlexNet_history.history['accuracy']
