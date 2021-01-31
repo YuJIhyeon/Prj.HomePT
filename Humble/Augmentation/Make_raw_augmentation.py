@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-for root, dirs, files in os.walk('../EMG_Processing/data/biceps'):
+for root, dirs, files in os.walk('../EMG_Processing/data/triceps'):
     filename = []
     for file in files:
         full_fname = os.path.join(root, file)
@@ -49,7 +49,7 @@ for index, fn in enumerate(filename):
             file_index += 1
             d = Surrogates(original_data=td, silence_level=2).AAFT_surrogates(td)
 
-            fw = open('./AAFT/Raw_data_10/Bi/'+str(file_index)+'.txt', 'w')
+            fw = open('../Data/Raw_data_10/Tri/'+str(file_index)+'.txt', 'w')
             for num in range(len(d[0])):
                 fw.write(str(num)+"\t"+str(d[1][num])+"\t"+str(d[2][num])+"\t"+str(d[3][num])+"\t"+str(d[4][num])+"\t"+
                       str(d[5][num])+"\t"+str(d[6][num])+"\t"+str(d[7][num])+"\t"+str(d[8][num])+"\t"+str(d[9][num])+"\n")
