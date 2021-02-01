@@ -9,16 +9,20 @@ config.gpu_options.per_process_gpu_memory_fraction = 0.4
 session = tf.compat.v1.InteractiveSession(config=config)
 
 
-base_path = '../Humble/Data/Raw_data_0/'
+base_path = '../Humble/Data/resultVecs/resultVecs_0/'
 
 X_i = []
 y = []
 
 for label in ['Bi', 'Tri']:
-    for feature in ['']:
+    for feature in ['striping']:
         for top, dir, f in os.walk(base_path + label + '/' + feature + '/'):
             for filename in f:
-                data = ''
+                data = open(os.path.join(base_path + label + '/' + feature + '/', filename), 'r')
+                temp_data = []
+                for d in data.split():
+                    print(d)
+                print(data)
                 X_i.append(data)
 
                 if label == 'Bi':
