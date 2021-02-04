@@ -7,8 +7,8 @@ def resize_image(image_path, save_path):
     after_img.save(save_path+'.png')
 
 img_type = ['striping_bw', 'striping_color', 'striping_midAng_bw', 'striping_midAng_color']
-base_path = './Before_resultFigs/Bi/'
-save_path = './After_resultFigs/Bi/'
+base_path = './AAFT_2/Tri/'
+save_path = '../Data/AAFT_2/Tri/'
 for folder in img_type:
     for top, dir, files in os.walk(base_path+folder):
         for i, file in enumerate(files):

@@ -8,8 +8,7 @@ config = tf.compat.v1.ConfigProto()
 config.gpu_options.per_process_gpu_memory_fraction = 0.4
 session = tf.compat.v1.InteractiveSession(config=config)
 
-
-base_path = '../Humble/Data/resultVecs/resultVecs_0/'
+base_path = '../Humble/Data/resultVecs/resultVecs_20/'
 
 X_i = []
 y = []
@@ -19,18 +18,18 @@ for label in ['Bi', 'Tri']:
         for top, dir, f in os.walk(base_path + label + '/' + feature + '/'):
             for filename in f:
                 data = open(os.path.join(base_path + label + '/' + feature + '/', filename), 'r')
+                data = data.read()
                 temp_data = []
                 for d in data.split():
-                    print(d)
-                print(data)
-                X_i.append(data)
+                    temp_data.append(float(d))
+                X_i.append(temp_data.copy())
 
                 if label == 'Bi':
                     y.append(2)
                 else:
                     y.append(3)
 
-print(X_i[0].shape)
+print(len(X_i[0]))
 
 X = np.array(X_i)
 y = np.array(y)
@@ -51,21 +50,21 @@ X_train, X_validation, y_train, y_validation = train_test_split(X_train, y_train
 
 Neural_Network = keras.models.Sequential([
     # input layer
-    keras.layers.Dense(144, activation='relu'),
+    keras.layers.Dense(1024, activation='relu', input_shape=(144,)),
 
     # hidden layer 1
-    keras.layers.Dense(32768, activation='relu'),
+    keras.layers.Dense(1024, activation='relu'),
 
     # hidden layer 2
-    keras.layers.Dense(32768, activation='relu'),
+    keras.layers.Dense(1024, activation='relu'),
 
     # output layer
-    keras.layers.Dense(2, activation='softmax')
+    keras.layers.Dense(1, activation='sigmoid')
 ])
 
 Neural_Network.summary()
 
-Neural_Network.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+Neural_Network.compile(loss=keras.losses.mean_squared_error, optimizer='rmsprop', metrics=['accuracy'])
 
 Neural_Network.fit(X_train, y_train, epochs=10, batch_size=16)
 

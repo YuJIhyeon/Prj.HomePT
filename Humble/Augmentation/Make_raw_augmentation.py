@@ -4,13 +4,17 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-for root, dirs, files in os.walk('../EMG_Processing/data/triceps'):
+file_index = 0
+type = 'Bi'
+iterative = 3
+base_folder = 'biceps'
+save_folder = 'Raw_data_3'
+
+for root, dirs, files in os.walk('../EMG_Processing/data/'+base_folder):
     filename = []
     for file in files:
         full_fname = os.path.join(root, file)
         filename.append(full_fname)
-
-file_index = 0
 
 for index, fn in enumerate(filename):
     with open(fn, 'r') as file:
@@ -45,11 +49,11 @@ for index, fn in enumerate(filename):
             td = np.vstack([td, ch[i]])
         td = np.vstack([td, angle])
 
-        for i in range(10):
+        for i in range(iterative):
             file_index += 1
             d = Surrogates(original_data=td, silence_level=2).AAFT_surrogates(td)
 
-            fw = open('../Data/Raw_data_10/Tri/'+str(file_index)+'.txt', 'w')
+            fw = open('../Data/'+save_folder+'/'+type+'/'+str(file_index)+'.txt', 'w')
             for num in range(len(d[0])):
                 fw.write(str(num)+"\t"+str(d[1][num])+"\t"+str(d[2][num])+"\t"+str(d[3][num])+"\t"+str(d[4][num])+"\t"+
                       str(d[5][num])+"\t"+str(d[6][num])+"\t"+str(d[7][num])+"\t"+str(d[8][num])+"\t"+str(d[9][num])+"\n")
