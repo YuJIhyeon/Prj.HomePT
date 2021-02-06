@@ -6,12 +6,16 @@ def resize_image(image_path, save_path):
     after_img = image.resize((227,227))
     after_img.save(save_path+'.png')
 
-img_type = ['striping_bw', 'striping_color', 'striping_midAng_bw', 'striping_midAng_color']
-base_path = './AAFT_2/Tri/'
-save_path = '../Data/AAFT_2/Tri/'
+img_type = ['auto_corr', 'hadamard', 'midAng']
+
+categori = ['Bi', 'Tri']
 for folder in img_type:
-    for top, dir, files in os.walk(base_path+folder):
-        for i, file in enumerate(files):
-            resize_image(base_path + folder + '/' + file, save_path + folder + '/' + str(i))
+    for ca in categori:
+        base_path = './resultFigsCorr_AAFT/resultFigsCorr_AAFT(20)/'+ca+'/'
+        save_path = '../Data/resultVecsFigs/AAFT_20/'+ca+'/'
+        for top, dir, files in os.walk(base_path + folder):
+            for i, file in enumerate(files):
+                resize_image(base_path + folder + '/' + file, save_path + folder + '/' + str(i))
+
 
 #resize_image()
