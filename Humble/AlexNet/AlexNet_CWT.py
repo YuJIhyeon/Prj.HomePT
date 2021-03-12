@@ -15,6 +15,7 @@ session = InteractiveSession(config=config)
 import os, re, glob
 import cv2
 
+
 image_size = 227
 
 groups_folder_path = '../Augmentation/AAFT/CWT/'

@@ -54,7 +54,7 @@ public class SaveFile : MonoBehaviour
             if (start && !writeFlag)
             {
                 cnt_rps += 1;
-                filePath = "./HumbleData/Humble" + DateTime.Now.ToString("MMdd_HHmm_ss")+ "_" + cnt_rps + ".txt";
+                filePath = "./HumbleData/" + DateTime.Now.ToString("MMdd_HHmm_ss")+ "_" + cnt_rps + ".txt";
                 fs = new FileStream(filePath, FileMode.Create);
                 sw = new StreamWriter(fs);
                 writeFlag = true;
