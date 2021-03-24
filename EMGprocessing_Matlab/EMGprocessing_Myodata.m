@@ -16,7 +16,7 @@ fid = fopen(filename,'r');
 
 N = 80; % need to be elaborated according to data length
 
-datafieldspec = '%f   %f %f %f %f %f %f %f %f %f   %f';
+datafieldspec = '%f   %f %f %f %f %f %f %f %f %f';
 S_data = textscan(fid,datafieldspec);
 fclose(fid);
 %---------------------------------------------------------------------------\
