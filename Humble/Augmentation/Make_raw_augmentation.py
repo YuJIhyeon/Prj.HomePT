@@ -5,10 +5,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 file_index = 0
-type = 'Rvcurl'
-iterative = 20
-base_folder = 'rvcurl'
-save_folder = 'Raw_data_20'
+type = 'Hammer'
+iterative = 4
+base_folder = 'hammer'
+save_folder = 'Raw_data_4'
 
 for root, dirs, files in os.walk('../EMG_Processing/data/'+base_folder):
     filename = []
