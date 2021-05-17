@@ -117,6 +117,7 @@
     <Compile Include="Assets\NoitomNeuron\TestCentroid.cs" />
     <Compile Include="Assets\NoitomNeuron\TestConfigJoint.cs" />
     <Compile Include="Assets\Scripts\BtnEvent.cs" />
+    <Compile Include="Assets\Scripts\Exercise_Video.cs" />
     <Compile Include="Assets\Scripts\HPbar.cs" />
     <Compile Include="Assets\Scripts\Kinect_Angle\AngleArc.cs" />
     <Compile Include="Assets\Scripts\Kinect_Angle\AngleSample.cs" />

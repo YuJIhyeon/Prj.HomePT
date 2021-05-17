@@ -6,6 +6,8 @@ using UnityEngine;
 public enum DisplayState
 {
     Start,
+    ExerciseChoice,
+    ExerciseVideo,
     Before_Measure,
     After_Measure,
     End_main,
@@ -23,15 +25,20 @@ public enum ExerciseType
 public class UI_Panel_Manager : MonoBehaviour
 {
     public CanvasGroup s_p;
+    public CanvasGroup ec_p;
+    public CanvasGroup ev_p;
     public CanvasGroup m_p;
     public CanvasGroup u_p;
     public CanvasGroup e_p;
     public CanvasGroup r_p;
     public static CanvasGroup Start_Panel;
+    public static CanvasGroup ExerciseChoice_Panel;
+    public static CanvasGroup ExerciseVideo_Panel;
     public static CanvasGroup Measure_Panel;
     public static CanvasGroup User_Panel;
     public static CanvasGroup End_Panel;
     public static CanvasGroup Recommend_Panel;
+    public static CanvasGroup None;                 // 아무것도 아님.
 
     public static DisplayState curState;
     public static ExerciseType exercise;
@@ -41,6 +48,8 @@ public class UI_Panel_Manager : MonoBehaviour
     {
         // 패널 초기화
         Start_Panel = s_p;
+        ExerciseChoice_Panel = ec_p;
+        ExerciseVideo_Panel = ev_p;
         Measure_Panel = m_p;
         User_Panel = u_p;
         End_Panel = e_p;
@@ -64,6 +73,16 @@ public class UI_Panel_Manager : MonoBehaviour
         c1.blocksRaycasts = true;
 
         c2.alpha = 0;
+        c2.interactable = false;
+        c2.blocksRaycasts = false;
+    }
+
+    public static void onGroup(CanvasGroup c1, CanvasGroup c2)
+    {
+        c1.alpha = 1;
+        c1.interactable = true;
+        c1.blocksRaycasts = true;
+
         c2.interactable = false;
         c2.blocksRaycasts = false;
     }

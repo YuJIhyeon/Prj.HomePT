@@ -76,7 +76,7 @@ public class UserPanel : MonoBehaviour
 
             if (user_state == User_state.Idle)
             {
-                //sets += 1;
+                sets += 1;
                 timer = 0;
                 reps = 0;
                 user_state = User_state.exercising;

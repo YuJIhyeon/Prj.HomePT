@@ -15,6 +15,20 @@ public class BtnEvent : MonoBehaviour
         UI_Panel_Manager.curState = DisplayState.Exercise;
     }
 
+    public void Btn_ExerciseVideo(){
+        UI_Panel_Manager.onGroup(UI_Panel_Manager.ExerciseVideo_Panel, UI_Panel_Manager.ExerciseChoice_Panel);
+        UI_Panel_Manager.curState = DisplayState.ExerciseVideo;
+        if (gameObject.transform.parent.name.Equals("Btn_DumbbelCurl")){
+            UI_Panel_Manager.exercise = ExerciseType.Dumbbell_curl;
+		}
+	}
+
+    public void Btn_ExerciseVideo_Back(){
+        UI_Panel_Manager.srGroup(UI_Panel_Manager.ExerciseChoice_Panel, UI_Panel_Manager.ExerciseVideo_Panel);
+        UI_Panel_Manager.curState = DisplayState.ExerciseChoice;
+        Debug.Log("BackBtn");
+    }
+
     public void Btn_Recommend()
     {
         UI_Panel_Manager.srGroup(UI_Panel_Manager.Recommend_Panel, UI_Panel_Manager.End_Panel);
@@ -30,9 +44,14 @@ public class BtnEvent : MonoBehaviour
     // Measure 창으로 가는 버튼 함수
     public void Btn_Go_Measure()
     {
-        UI_Panel_Manager.srGroup(UI_Panel_Manager.Measure_Panel, UI_Panel_Manager.Start_Panel);
-        UI_Panel_Manager.curState = DisplayState.Before_Measure;
+        UI_Panel_Manager.srGroup(UI_Panel_Manager.Measure_Panel, UI_Panel_Manager.ExerciseChoice_Panel);
+        UI_Panel_Manager.curState = DisplayState.ExerciseChoice;
     }
+
+    public void Btn_Go_ExerciseChoice(){
+        UI_Panel_Manager.srGroup(UI_Panel_Manager.ExerciseChoice_Panel, UI_Panel_Manager.Start_Panel);
+        UI_Panel_Manager.curState = DisplayState.Before_Measure;
+	}
 
     // 누르면 측정 시작
     public void Btn_Measure()
