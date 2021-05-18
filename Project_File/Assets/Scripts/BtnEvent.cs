@@ -21,7 +21,19 @@ public class BtnEvent : MonoBehaviour
         if (gameObject.transform.parent.name.Equals("Btn_DumbbelCurl")){
             UI_Panel_Manager.exercise = ExerciseType.Dumbbell_curl;
 		}
-	}
+        else if (gameObject.transform.parent.name.Equals("Btn_HammerCurl"))
+        {
+            UI_Panel_Manager.exercise = ExerciseType.Hammer_curl;
+        }
+        else if (gameObject.transform.parent.name.Equals("Btn_ReverseCurl"))
+        {
+            UI_Panel_Manager.exercise = ExerciseType.Reverse_curl;
+        }
+        else if (gameObject.transform.parent.name.Equals("Btn_TricepsKickback"))
+        {
+            UI_Panel_Manager.exercise = ExerciseType.Dumbbell_kick_back;
+        }
+    }
 
     public void Btn_ExerciseVideo_Back(){
         UI_Panel_Manager.srGroup(UI_Panel_Manager.ExerciseChoice_Panel, UI_Panel_Manager.ExerciseVideo_Panel);

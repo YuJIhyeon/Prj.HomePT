@@ -19,6 +19,8 @@ public enum DisplayState
 public enum ExerciseType
 {
     Dumbbell_curl,
+    Hammer_curl,
+    Reverse_curl,
     Dumbbell_kick_back
 }
 
@@ -62,7 +64,7 @@ public class UI_Panel_Manager : MonoBehaviour
 
 
         // 일단은 덤벨컬만 한다는 가정 하에 진행.
-        exercise = ExerciseType.Dumbbell_curl;
+        //exercise = ExerciseType.Dumbbell_curl;
         //exercise = ExerciseType.Dumbbell_kick_back;
     }
 
