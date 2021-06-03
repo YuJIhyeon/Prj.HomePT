@@ -13,35 +13,37 @@ public class Measure : MonoBehaviour
     float rms = 0;
     public static float maxRms = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        period += Time.deltaTime;
-        if (period > 0.2f)
-        {
-            period = 0;
-            if (UI_Panel_Manager.curState == DisplayState.After_Measure)
+        if(UI_Panel_Manager.curState == DisplayState.After_Measure){
+            if (Input.GetKeyDown(KeyCode.O))
             {
-                rms = ThalmicMyo.getRMS();
-                if (maxRms < rms)
-                {
-                    maxRms = rms;
-                    isChange = true;
-                }
-                RMS.text = System.Math.Round(rms, 2) + " RMS";
+                UI_Panel_Manager.srGroup(UI_Panel_Manager.User_Panel, UI_Panel_Manager.Measure_Panel);
+                UI_Panel_Manager.curState = DisplayState.Exercise;
+            }
 
-                if (isChange)
+            period += Time.deltaTime;
+            if (period > 0.2f)
+            {
+                period = 0;
+                if (UI_Panel_Manager.curState == DisplayState.After_Measure)
                 {
-                    isChange = false;
-                    maxRMS.text = "당신의 최대 RMS : " + System.Math.Round(maxRms, 2);
+                    rms = ThalmicMyo.getRMS();
+                    if (maxRms < rms)
+                    {
+                        maxRms = rms;
+                        isChange = true;
+                    }
+                    RMS.text = System.Math.Round(rms, 2) + " RMS";
+
+                    if (isChange)
+                    {
+                        isChange = false;
+                        maxRMS.text = "당신의 최대 RMS : " + System.Math.Round(maxRms, 2);
+                    }
                 }
             }
-        }  
+        }
     }
 }

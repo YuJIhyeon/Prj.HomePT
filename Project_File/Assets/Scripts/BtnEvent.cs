@@ -73,12 +73,12 @@ public class BtnEvent : MonoBehaviour
 
     public void Btn_Go_Exercise()
     {
-
         // 측정을 했으면
         if (Measure.maxRms != 0)
         {
             UI_Panel_Manager.srGroup(UI_Panel_Manager.User_Panel, UI_Panel_Manager.Measure_Panel);
             UI_Panel_Manager.curState = DisplayState.Exercise;
+            UserPanel.user_state = User_state.exercising;
         }
         
         // 측정 안했으면

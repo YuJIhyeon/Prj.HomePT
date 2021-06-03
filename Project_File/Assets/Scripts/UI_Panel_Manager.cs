@@ -33,6 +33,7 @@ public class UI_Panel_Manager : MonoBehaviour
     public CanvasGroup u_p;
     public CanvasGroup e_p;
     public CanvasGroup r_p;
+    public CanvasGroup ft_p;
     public static CanvasGroup Start_Panel;
     public static CanvasGroup ExerciseChoice_Panel;
     public static CanvasGroup ExerciseVideo_Panel;
@@ -40,6 +41,7 @@ public class UI_Panel_Manager : MonoBehaviour
     public static CanvasGroup User_Panel;
     public static CanvasGroup End_Panel;
     public static CanvasGroup Recommend_Panel;
+    public static CanvasGroup Freetime_Panel;
     public static CanvasGroup None;                 // 아무것도 아님.
 
     public static DisplayState curState;
@@ -56,6 +58,7 @@ public class UI_Panel_Manager : MonoBehaviour
         User_Panel = u_p;
         End_Panel = e_p;
         Recommend_Panel = r_p;
+        Freetime_Panel = ft_p;
 
         srGroup(Start_Panel, End_Panel);
 
