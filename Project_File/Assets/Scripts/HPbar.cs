@@ -30,7 +30,7 @@ public class HPbar : MonoBehaviour
             if (UI_Panel_Manager.curState == DisplayState.Exercise)
             {
                 start_ex = true;
-                maxHp = Measure.maxRms * 120;
+                maxHp = Measure.maxRms * 140;
                 hpBar.value = 1;
                 Debug.Log("MAX_hp : " + maxHp);
                 SaveFile.start = true;

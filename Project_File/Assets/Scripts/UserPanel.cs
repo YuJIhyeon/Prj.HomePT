@@ -20,7 +20,7 @@ public class UserPanel : MonoBehaviour
 
     private int reps;
     private int sets;
-    float period=0;
+    float period = 0;
     public static bool do_raps = false;
 
     public static double RMS = 0;
@@ -30,7 +30,7 @@ public class UserPanel : MonoBehaviour
     public Image assistant;
     private float assis_alpha = 0;
     private int cnt_wrong_reps = 0;
-    
+
 
     #region StopWatch
     float timer, fr_timer;
@@ -59,7 +59,8 @@ public class UserPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(UI_Panel_Manager.curState == DisplayState.Exercise){
+        if (UI_Panel_Manager.curState == DisplayState.Exercise)
+        {
             stateText.text = user_state.ToString();
             period += Time.deltaTime;
 
@@ -111,12 +112,17 @@ public class UserPanel : MonoBehaviour
             // O 입력 시 reps++
             else if (Input.GetKeyDown(KeyCode.O))
             {
-                reps += 1;
+                RepProcessing();
+            }
+            else if (Input.GetKeyDown(KeyCode.P))
+            {
+                SetProcessing();
             }
         }
     }
 
-    void CheckExerciseValidation(){
+    void CheckExerciseValidation()
+    {
         period = 0;
 
         RMS = (double)(Math.Round(ThalmicMyo.getRMS(), 2));
@@ -131,14 +137,16 @@ public class UserPanel : MonoBehaviour
             RepProcessing();
             //Y_hat = formal(RMS, ANG);
         }
-        else{
+        else
+        {
             cnt_wrong_reps += 1;
-		}
+        }
 
-        if(cnt_wrong_reps >= 3){
+        if (cnt_wrong_reps >= 3)
+        {
             assis_alpha += 0.2f;
             assistant.color = new Color(255, 255, 255, assis_alpha);
-		}
+        }
     }
 
     void RepProcessing()
@@ -149,9 +157,11 @@ public class UserPanel : MonoBehaviour
 
         cnt_wrong_reps = 0;
         assis_alpha = 0;
+        assistant.color = new Color(255, 255, 255, 0);
     }
 
-    void BreaktimeProcessing(){
+    void BreaktimeProcessing()
+    {
         UI_Panel_Manager.Freetime_Panel.alpha = 1;
         BreaktimeStopWatch(FreetimeText);
         if (fr_timer <= 0f)
@@ -161,7 +171,8 @@ public class UserPanel : MonoBehaviour
             user_state = User_state.exercising;
         }
     }
-    void SetProcessing(){
+    void SetProcessing()
+    {
         sets += 1;
         timer = 0;
         reps = 0;
@@ -175,7 +186,7 @@ public class UserPanel : MonoBehaviour
     {
         timer += Time.deltaTime;
         seconds = (int)(timer % 60);
-        milseconds = Mathf.Ceil((timer - seconds)*100);
+        milseconds = Mathf.Ceil((timer - seconds) * 100);
         minutes = (int)((timer / 60) % 60);
 
         timeText.text = "Time: " + minutes.ToString("00") + ":" + seconds.ToString("00") + ":" + milseconds.ToString("00");
@@ -187,16 +198,19 @@ public class UserPanel : MonoBehaviour
         seconds = (int)(fr_timer % 60);
         milseconds = Mathf.Ceil((fr_timer - seconds) * 100);
         timeText.text = seconds.ToString("00") + " : " + milseconds.ToString("00");
-        
-        if (fr_timer >= 5f){
+
+        if (fr_timer >= 5f)
+        {
             timeText.color = new Color(255, 255, 255);
             timeText.fontStyle = FontStyle.Normal;
         }
-        else if (fr_timer >= 3f){
+        else if (fr_timer >= 3f)
+        {
             timeText.color = new Color(255, 255, 0);
             timeText.fontStyle = FontStyle.Bold;
         }
-        else{
+        else
+        {
             timeText.color = new Color(255, 0, 0);
             timeText.fontStyle = FontStyle.BoldAndItalic;
         }
@@ -227,7 +241,7 @@ public class UserPanel : MonoBehaviour
         //After first layer
         double X1 = 6.01971921 * RMS - 15.7309641 * ANG - 4.82527526;
         double X2 = -7.96912376 * RMS - 11.27525099 * ANG + 0.96991828;
-        
+
 
         double H1 = sigmoid(X1);
         double H2 = sigmoid(X2);
@@ -236,7 +250,7 @@ public class UserPanel : MonoBehaviour
 
         double Y_hat = sigmoid(A);
 
-        return Y_hat; 
+        return Y_hat;
     }
-   
+
 }

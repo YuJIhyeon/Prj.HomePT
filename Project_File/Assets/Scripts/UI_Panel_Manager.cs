@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum DisplayState
 {
@@ -46,7 +47,9 @@ public class UI_Panel_Manager : MonoBehaviour
 
     public static DisplayState curState;
     public static ExerciseType exercise;
-    
+
+    public Text UI_state;
+
 
     public void Start()
     {
@@ -71,6 +74,11 @@ public class UI_Panel_Manager : MonoBehaviour
         //exercise = ExerciseType.Dumbbell_kick_back;
     }
 
+    private void Update()
+    {
+        UI_state.text = curState.ToString();
+    }
+
     public static void srGroup(CanvasGroup c1, CanvasGroup c2)         // 순서대로 1, 0 대입
     {
         c1.alpha = 1;
@@ -88,7 +96,7 @@ public class UI_Panel_Manager : MonoBehaviour
         c1.interactable = true;
         c1.blocksRaycasts = true;
 
-        c2.interactable = false;
-        c2.blocksRaycasts = false;
+        c2.interactable = true;
+        c2.blocksRaycasts = true;
     }
 }
